@@ -1,0 +1,689 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Digitalis.UndoSystem</name>
+    </assembly>
+    <members>
+        <member name="T:Digitalis.UndoSystem.UndoableList`1">
+            <summary>
+            Defines a strongly-typed list which supports undo/redo functionality.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <remarks>
+            <b>UndoableList</b> functions exactly like a normal <see cref="T:System.Collections.Generic.IList`1"/> except that all modifications made to it
+            are automatically added to the current command of the active <see cref="T:Digitalis.UndoSystem.UndoStack"/>, if any.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.#ctor">
+            <summary>
+            Initializes an instance of the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/> class that is empty.
+            </summary>
+            <remarks>
+            The <see cref="T:Digitalis.UndoSystem.UndoableList`1"/> will be created in read-write mode.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.#ctor(System.Boolean)">
+            <summary>
+            Initializes an instance of the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/> class that is empty and has the specified access mode.
+            </summary>
+            <param name="readOnly">If <b>true</b>, the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/> will be read-only; otherwise it is read-write.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Boolean)">
+            <summary>
+            Initializes an instance of the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/> class that contains elements copied from the specified collection and has the specified access mode.
+            </summary>
+            <param name="collection">The collection whose elements are to be copied to the new list.</param>
+            <param name="readOnly">If <b>true</b>, the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/> will be read-only; otherwise it is read-write.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="collection"/> is a null reference.</exception>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Adds the elements of the specified collection to the end of the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/>.
+            </summary>
+            <param name="items">The collection whose elements should be added to the end of the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/>. The collection itself cannot be null, but it can contain elements that are null, if type T is a reference type.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.InsertRange(System.Int32,System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Inserts the elements of a collection into the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/> at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which the new elements should be inserted.</param>
+            <param name="items">The collection whose elements should be inserted into the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/>. The collection itself cannot be null, but it can contain elements that are null, if type T is a reference type.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.RemoveRange(System.Int32,System.Int32)">
+            <summary>
+            Removes a range of elements from the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/>.
+            </summary>
+            <param name="index">The zero-based starting index of the range of elements to remove.</param>
+            <param name="count">The number of elements to remove.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.ReplaceContents(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Replaces the entire contents of the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/>.
+            </summary>
+            <param name="items">The collection whose elements should be inserted into the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/>. The collection itself cannot be null, but it can contain elements that are null, if type T is a reference type.</param>
+            <remarks>
+            This is similar to calling <see cref="M:Digitalis.UndoSystem.UndoableList`1.Clear"/> followed by <see cref="!:AddRange()"/>, but raises the <see cref="E:Digitalis.UndoSystem.UndoableList`1.ItemsReplaced"/> event instead of <see cref="E:Digitalis.UndoSystem.UndoableList`1.ListCleared"/> and <see cref="E:Digitalis.UndoSystem.UndoableList`1.ItemsAdded"/>.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.IndexOf(`0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.Insert(System.Int32,`0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.RemoveAt(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.CopyTo(System.Array,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.Add(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.Contains(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.IndexOf(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.Insert(System.Int32,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.Remove(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.Add(`0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.Clear">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.Contains(`0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.CopyTo(`0[],System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.Remove(`0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.ToArray">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.OnItemsAdded(Digitalis.UndoSystem.UndoableListChangedEventArgs{`0})">
+            <summary>
+            Raises the <see cref="E:Digitalis.UndoSystem.UndoableList`1.ItemsAdded"/> event.
+            </summary>
+            <param name="e">An <see cref="T:Digitalis.UndoSystem.UndoableListChangedEventArgs`1"/> that contains the event data.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.OnItemsRemoved(Digitalis.UndoSystem.UndoableListChangedEventArgs{`0})">
+            <summary>
+            Raises the <see cref="E:Digitalis.UndoSystem.UndoableList`1.ItemsRemoved"/> event.
+            </summary>
+            <param name="e">An <see cref="T:Digitalis.UndoSystem.UndoableListChangedEventArgs`1"/> that contains the event data.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.OnItemsReplaced(Digitalis.UndoSystem.UndoableListReplacedEventArgs{`0})">
+            <summary>
+            Raises the <see cref="E:Digitalis.UndoSystem.UndoableList`1.ItemsReplaced"/> event.
+            </summary>
+            <param name="e">An <see cref="T:Digitalis.UndoSystem.UndoableListReplacedEventArgs`1"/> that contains the event data.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.OnListCleared(Digitalis.UndoSystem.UndoableListChangedEventArgs{`0})">
+            <summary>
+            Raises the <see cref="E:Digitalis.UndoSystem.UndoableList`1.ListCleared"/> event.
+            </summary>
+            <param name="e">An <see cref="T:Digitalis.UndoSystem.UndoableListChangedEventArgs`1"/> that contains the event data.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.GetEnumerator">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableList`1.System#Collections#IEnumerable#GetEnumerator">
+            <inheritdoc />
+        </member>
+        <member name="E:Digitalis.UndoSystem.UndoableList`1.ItemsAdded">
+            <summary>
+            Occurs when items are added to the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/>.
+            </summary>
+        </member>
+        <member name="E:Digitalis.UndoSystem.UndoableList`1.ItemsRemoved">
+            <summary>
+            Occurs when items are removed from the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/>.
+            </summary>
+        </member>
+        <member name="E:Digitalis.UndoSystem.UndoableList`1.ItemsReplaced">
+            <summary>
+            Occurs when items in the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/> are replaced.
+            </summary>
+        </member>
+        <member name="E:Digitalis.UndoSystem.UndoableList`1.ListCleared">
+            <summary>
+            Occurs when the <see cref="T:Digitalis.UndoSystem.UndoableList`1"/> is cleared.
+            </summary>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableList`1.Item(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableList`1.IsSynchronized">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableList`1.SyncRoot">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableList`1.IsFixedSize">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableList`1.System#Collections#IList#Item(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableList`1.Count">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableList`1.IsReadOnly">
+            <inheritdoc />
+        </member>
+        <member name="T:Digitalis.UndoSystem.IAction">
+            <summary>
+            Defines an object which represents a change to an undoable object.
+            </summary>
+        </member>
+        <member name="M:Digitalis.UndoSystem.IAction.Apply">
+            <summary>
+            Applies the <see cref="T:Digitalis.UndoSystem.IAction"/>.
+            </summary>
+        </member>
+        <member name="M:Digitalis.UndoSystem.IAction.Revert">
+            <summary>
+            Reverts the <see cref="T:Digitalis.UndoSystem.IAction"/>.
+            </summary>
+        </member>
+        <member name="T:Digitalis.UndoSystem.UndoableListChangedEventHandler`1">
+            <summary>
+            Represents a method which is invoked when the contents of an <see cref="T:Digitalis.UndoSystem.UndoableList`1"/> are added to or removed.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:Digitalis.UndoSystem.UndoableListChangedEventArgs`1"/> that contains the event data.</param>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="T:Digitalis.UndoSystem.UndoableListChangedEventArgs`1">
+            <summary>
+            Provides data for the <see cref="E:Digitalis.UndoSystem.UndoableList`1.ItemsAdded"/>, <see cref="E:Digitalis.UndoSystem.UndoableList`1.ItemsRemoved"/> and <see cref="E:Digitalis.UndoSystem.UndoableList`1.ListCleared"/>events.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableListChangedEventArgs`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Digitalis.UndoSystem.UndoableListChangedEventArgs`1"/> class with the specified values.
+            </summary>
+            <param name="items">The items which were added or removed.</param>
+            <param name="firstIndex">The index of the first item.</param>
+            <param name="count">The number of items.</param>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableListChangedEventArgs`1.Items">
+            <summary>
+            Gets the items which were added or removed.
+            </summary>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableListChangedEventArgs`1.FirstIndex">
+            <summary>
+            Gets the index of the first item which was added or removed.
+            </summary>
+            <remarks>
+            In the case of a <see cref="E:Digitalis.UndoSystem.UndoableList`1.ItemsRemoved"/> event, this is the index at which the item
+            was present prior to its removal.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableListChangedEventArgs`1.Count">
+            <summary>
+            Gets the number of items which were added or removed.
+            </summary>
+        </member>
+        <member name="T:Digitalis.UndoSystem.UndoableListReplacedEventHandler`1">
+            <summary>
+            Represents a method which is invoked when the contents of an <see cref="T:Digitalis.UndoSystem.UndoableList`1"/> are replaced.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:Digitalis.UndoSystem.UndoableListReplacedEventArgs`1"/> that contains the event data.</param>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="T:Digitalis.UndoSystem.UndoableListReplacedEventArgs`1">
+            <summary>
+            Provides data for the <see cref="E:Digitalis.UndoSystem.UndoableList`1.ItemsReplaced"/> event.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableListReplacedEventArgs`1.#ctor(Digitalis.UndoSystem.UndoableListChangedEventArgs{`0},Digitalis.UndoSystem.UndoableListChangedEventArgs{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Digitalis.UndoSystem.UndoableListReplacedEventArgs`1"/> class with the specified values.
+            </summary>
+            <param name="itemsAdded">The items which were added.</param>
+            <param name="itemsRemoved">The items which were removed.</param>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableListReplacedEventArgs`1.ItemsAdded">
+            <summary>
+            Gets the items which were added.
+            </summary>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableListReplacedEventArgs`1.ItemsRemoved">
+            <summary>
+            Gets the items which were removed.
+            </summary>
+        </member>
+        <member name="T:Digitalis.UndoSystem.UndoableProperty`1">
+            <summary>
+            Represents a property which supports undo/redo functionality.
+            </summary>
+            <typeparam name="T">The type of property.</typeparam>
+            <remarks>
+            To use, declare a private instance of this as the backing-store for your property. When your property's
+            getter and setter are invoked, have them get/set <see cref="P:Digitalis.UndoSystem.UndoableProperty`1.Value"/>.
+            <para>If the property's <see cref="P:Digitalis.UndoSystem.UndoableProperty`1.Value"/> is set multiple times consecutively within a single command,
+            the changes will be concatenated into a single <see cref="T:Digitalis.UndoSystem.IAction"/> for efficiency.</para>
+            <code>
+               private int UndoableProperty&lt;int&gt; myPropertyStore = new UndoableProperty&lt;int&gt;(myPropertyInitialValue);
+               public int MyProperty { get { return myPropertyStore.Value; } set { myPropertyStore.Value = value; } }
+            </code>
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableProperty`1.#ctor">
+            <summary>
+            Initializes an instance of the <see cref="T:Digitalis.UndoSystem.UndoableProperty`1"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableProperty`1.#ctor(`0)">
+            <summary>
+            Initializes an instance of the <see cref="T:Digitalis.UndoSystem.UndoableProperty`1"/> class with the specified value.
+            </summary>
+            <param name="initialValue">The initial value of the <see cref="T:Digitalis.UndoSystem.UndoableProperty`1"/>.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoableProperty`1.OnValueChanged(Digitalis.UndoSystem.PropertyChangedEventArgs{`0})">
+            <summary>
+            Raises the <see cref="E:Digitalis.UndoSystem.UndoableProperty`1.ValueChanged"/> event.
+            </summary>
+            <param name="e">A <see cref="T:Digitalis.UndoSystem.PropertyChangedEventArgs`1"/> that contains the event data.</param>
+        </member>
+        <member name="E:Digitalis.UndoSystem.UndoableProperty`1.ValueChanged">
+            <summary>
+            Occurs when <see cref="P:Digitalis.UndoSystem.UndoableProperty`1.Value"/> changes.
+            </summary>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoableProperty`1.Value">
+            <summary>
+            Gets or sets the value of the <see cref="T:Digitalis.UndoSystem.UndoableProperty`1"/>.
+            </summary>
+            <remarks>
+            Raises the <see cref="E:Digitalis.UndoSystem.UndoableProperty`1.ValueChanged"/> event when its value changes, either directly or via <see cref="M:Digitalis.UndoSystem.IAction.Apply"/> or <see cref="M:Digitalis.UndoSystem.IAction.Revert"/>.
+            </remarks>
+        </member>
+        <member name="T:Digitalis.UndoSystem.PropertyChangedEventHandler`1">
+            <summary>
+            Represents a method which is invoked when the value of an <see cref="T:Digitalis.UndoSystem.UndoableProperty`1"/> changes.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:Digitalis.UndoSystem.PropertyChangedEventArgs`1"/> that contains the event data.</param>
+            <typeparam name="T">The type of the <see cref="T:Digitalis.UndoSystem.UndoableProperty`1"/>.</typeparam>
+        </member>
+        <member name="T:Digitalis.UndoSystem.PropertyChangedEventArgs`1">
+            <summary>
+            Provides data for the <see cref="E:Digitalis.UndoSystem.UndoableProperty`1.ValueChanged"/> event.
+            </summary>
+            <typeparam name="T">The type of the <see cref="T:Digitalis.UndoSystem.UndoableProperty`1"/>.</typeparam>
+        </member>
+        <member name="M:Digitalis.UndoSystem.PropertyChangedEventArgs`1.#ctor(`0,`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Digitalis.UndoSystem.PropertyChangedEventArgs`1"/> class with the specified values.
+            </summary>
+            <param name="oldValue">The previous value of the <see cref="T:Digitalis.UndoSystem.UndoableProperty`1"/>.</param>
+            <param name="newValue">The new value of the <see cref="T:Digitalis.UndoSystem.UndoableProperty`1"/>.</param>
+        </member>
+        <member name="P:Digitalis.UndoSystem.PropertyChangedEventArgs`1.OldValue">
+            <summary>
+            Gets the previous value of the <see cref="T:Digitalis.UndoSystem.UndoableProperty`1"/>.
+            </summary>
+        </member>
+        <member name="P:Digitalis.UndoSystem.PropertyChangedEventArgs`1.NewValue">
+            <summary>
+            Gets the current value of the <see cref="T:Digitalis.UndoSystem.UndoableProperty`1"/>.
+            </summary>
+        </member>
+        <member name="T:Digitalis.UndoSystem.UndoStack">
+             <summary>
+             Represents a stack of undoable commands.
+             </summary>
+             <remarks>
+             <b>UndoStack</b> provides a flexible undo/redo mechanism, based on the notion that each entry in the stack is a
+             'command' consisting of one or more 'actions'. Actions may be added to a command from disparate sources, and are
+             guaranteed to be applied in the order they were added, and undone in the reverse of that order.
+             <para>Multiple <b>UndoStack</b>s may be created, although only one stack may be active per thread, and only one
+             command per stack. <see cref="M:Digitalis.UndoSystem.UndoStack.StartCommand(System.Object)">Starting</see> a command on an <b>UndoStack</b> automatically makes
+             it the active one for the thread.</para>
+             <para><b>UndoStack</b> supports random-access to the array of stored commands, as well as traditional <see cref="M:Digitalis.UndoSystem.UndoStack.Undo"/>
+             and <see cref="M:Digitalis.UndoSystem.UndoStack.Redo"/> functions. The <see cref="P:Digitalis.UndoSystem.UndoStack.Size"/> of the array may be set, and events are available for
+             all major actions.</para>
+             <para>Adding undo/redo support to an application involves creating an <b>UndoStack</b> to manage the array, and
+             <see cref="M:Digitalis.UndoSystem.UndoStack.StartCommand(System.Object)">adding commands</see> to it. <see cref="T:Digitalis.UndoSystem.IAction"/>s can be added to commands from any source;
+             a typical pattern is to use <see cref="T:Digitalis.UndoSystem.UndoableProperty`1"/> to implement the properties of a class.</para>
+             <para>Because <see cref="T:Digitalis.UndoSystem.IAction"/>s are <see cref="M:Digitalis.UndoSystem.IAction.Apply">applied</see> as they are added, the command is complete
+             when <see cref="M:Digitalis.UndoSystem.UndoStack.EndCommand"/> is called. It can be abandoned by calling <see cref="M:Digitalis.UndoSystem.UndoStack.CancelCommand"/> instead, which will roll
+             back the <see cref="T:Digitalis.UndoSystem.IAction"/>s in the reverse of the order they were added.</para>
+             </remarks>
+             <example>
+             <code>
+             UndoStack stack = new UndoStack();
+            
+             stack.StartCommand("Perform some function");        // initiate a new command
+             UndoStack.AddAction(new Action());                  // add some action to it; this will execute immediately
+             UndoStack.AddAction(new Action());                  // add another action
+             stack.EndCommand();                                 // and complete the command
+            
+             stack.Undo();                                       // the last command is undone
+             </code>
+             </example>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.AddAction(Digitalis.UndoSystem.IAction)">
+            <summary>
+            Adds an <see cref="T:Digitalis.UndoSystem.IAction"/> to the current command.
+            </summary>
+            <param name="action">The <see cref="T:Digitalis.UndoSystem.IAction"/> to add. It will be <see cref="M:Digitalis.UndoSystem.IAction.Apply">applied</see> immediately, regardless of whether there is a current command.</param>
+            <remarks>
+            If there is no current command, or the current command is suspended, the method returns after applying the <see cref="T:Digitalis.UndoSystem.IAction"/>. This simplifies the process of adding undo/redo support to a system:
+            the application has the choice of whether or not to enable support without having to modify code which adds actions to handle both cases.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.LastAction">
+            <summary>
+            Returns the last <see cref="T:Digitalis.UndoSystem.IAction"/> added to the current command.
+            </summary>
+            <returns>An <see cref="T:Digitalis.UndoSystem.IAction"/>, or <c>null</c> if the current command is empty.</returns>
+            <remarks>
+            If there is no current command, or the current command is suspended, the method returns <c>null</c>.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.#ctor">
+            <summary>
+            Initializes an instance of the <see cref="T:Digitalis.UndoSystem.UndoStack"/> class with an unlimited initial <see cref="P:Digitalis.UndoSystem.UndoStack.Size"/>.
+            </summary>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.#ctor(System.Int32)">
+            <summary>
+            Initializes an instance of the <see cref="T:Digitalis.UndoSystem.UndoStack"/> class with the specified initial <see cref="P:Digitalis.UndoSystem.UndoStack.Size"/>.
+            </summary>
+            <param name="initialSize">The initial size of the stack.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.Clear">
+            <summary>
+            Clears the <see cref="T:Digitalis.UndoSystem.UndoStack"/> of all commands.
+            </summary>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.StartCommand(System.Object)">
+            <summary>
+            Initiates a new command.
+            </summary>
+            <param name="identifier">An optional identifier for the new command. If not required, pass <c>null</c>.</param>
+            <exception cref="T:System.InvalidOperationException">A command is already started on an <see cref="T:Digitalis.UndoSystem.UndoStack"/> in the same thread.</exception>
+            <remarks>
+            Commands are not added to the <see cref="T:Digitalis.UndoSystem.UndoStack"/> until they are <see cref="M:Digitalis.UndoSystem.UndoStack.EndCommand">committed</see>. If successful, this method raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandStarted"/> event.
+            <para><paramref name="identifier"/> may be used for anything you like. It is only used by <see cref="T:Digitalis.UndoSystem.UndoStack"/> in order to determine whether two consecutive
+            commands may be <see cref="M:Digitalis.UndoSystem.UndoStack.EndCommand(System.Boolean)">merged</see>, so the only requirement is that <see cref="M:System.Object.Equals(System.Object)"/> can be used to check whether two identifiers
+            are equivalent. For example, <paramref name="identifier"/> might be used to hold a string describing the function of the command which can then be displayed to the user
+            to inform them what they are about to undo or redo.</para>
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.EndCommand">
+            <summary>
+            Ends the current command and adds it to the <see cref="T:Digitalis.UndoSystem.UndoStack"/>.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">There is no command started on the <see cref="T:Digitalis.UndoSystem.UndoStack"/>.</exception>
+            <remarks>
+             If successful, this method raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandEnded"/> event, adds the command to the <see cref="T:Digitalis.UndoSystem.UndoStack"/> and raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandExecuted"/> event.
+            The <see cref="E:Digitalis.UndoSystem.UndoStack.CommandEnded"/> event may add further <see cref="T:Digitalis.UndoSystem.IAction"/>s to the command if it wishes.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.EndCommand(System.Boolean)">
+            <summary>
+            Ends the current command and adds it to the <see cref="T:Digitalis.UndoSystem.UndoStack"/>.
+            </summary>
+            <param name="mergeable">If <b>true</b> and the last command has the same identifier as the current one,
+            the <see cref="T:Digitalis.UndoSystem.IAction"/>s in this command are added to the previous one. Otherwise, the command is added to
+            the end of the <see cref="T:Digitalis.UndoSystem.UndoStack"/>.</param>
+            <exception cref="T:System.InvalidOperationException">There is no command started on the <see cref="T:Digitalis.UndoSystem.UndoStack"/>.</exception>
+            <remarks>
+             If successful, this method raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandEnded"/> event, adds the command to the <see cref="T:Digitalis.UndoSystem.UndoStack"/> and raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandExecuted"/> event.
+            The <see cref="E:Digitalis.UndoSystem.UndoStack.CommandEnded"/> event may add further <see cref="T:Digitalis.UndoSystem.IAction"/>s to the command if it wishes.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.CancelCommand">
+            <summary>
+            Abandons a command, reverting any changes it made.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">There is no command started on the <see cref="T:Digitalis.UndoSystem.UndoStack"/>.</exception>
+            <remarks>
+            The current command is rolled back, reverting its <see cref="T:Digitalis.UndoSystem.IAction"/>s in the reverse order they were added.
+            <para>If successful, this method raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandCancelled"/> event.</para>
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.SuspendCommand">
+            <summary>
+            Suspends the current command.
+            </summary>
+            <remarks>
+            While suspended, <see cref="T:Digitalis.UndoSystem.IAction"/>s will not be added to the command, but will execute immediately and irrevocably.
+            The purpose of this function is to allow operations to take place inside the context of a command but which should not
+            be undoable - for example, creating a new object.
+            <para>When done, the command can be resumed by calling <see cref="M:Digitalis.UndoSystem.UndoStack.ResumeCommand"/>. The suspend/resume functionality
+            'nests', so further actions will only be added to the command once every call to <b>SuspendCommand()</b> is matched by
+            exactly one call to <see cref="M:Digitalis.UndoSystem.UndoStack.ResumeCommand"/>.</para>
+            <para>If no command is started, this method has no effect.</para>
+            </remarks>
+            <seealso cref="M:Digitalis.UndoSystem.UndoStack.ResumeCommand"/>.
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.ResumeCommand">
+            <summary>
+            Resumes the current command.
+            </summary>
+            <remarks>
+            While suspended, <see cref="T:Digitalis.UndoSystem.IAction"/>s will not be added to the command, but will execute immediately and irrevocably.
+            The purpose of this function is to allow operations to take place inside the context of a command but which should not
+            be undoable - for example, creating a new object.
+            <para>The suspend/resume functionality 'nests', so further actions will only be added to the command once every call to
+            <see cref="M:Digitalis.UndoSystem.UndoStack.SuspendCommand"/> is matched by exactly one call to <b>ResumeCommand()</b>.</para>
+            <para>If no command is started, or if the current command is not suspended, this method has no effect.</para>
+            </remarks>
+            <seealso cref="M:Digitalis.UndoSystem.UndoStack.SuspendCommand"/>.
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.Undo">
+            <summary>
+            Undoes the last command on the <see cref="T:Digitalis.UndoSystem.UndoStack"/>.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">There are no commands to undo.</exception>
+            <remarks>
+            If successful, this method raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandRolledBack"/> event.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.Redo">
+            <summary>
+            Redoes the last undone command on the <see cref="T:Digitalis.UndoSystem.UndoStack"/>.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">There are no commands to redo.</exception>
+            <remarks>
+            If successful, this method raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandExecuted"/> event.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.SetSavePoint">
+            <summary>
+            Sets a marker on the current <see cref="P:Digitalis.UndoSystem.UndoStack.Position"/>.
+            </summary>
+            <remarks>
+            This method, along with the property <see cref="P:Digitalis.UndoSystem.UndoStack.HasUnsavedChanges"/>, provides a simple mechanism for
+            determining whether any commands have been executed, undone or redone since the last time the method
+            was called.
+            <para>While an application could achieve the same result by saving the value of <see cref="P:Digitalis.UndoSystem.UndoStack.Position"/> itself,
+            this method will take into account the fact that <see cref="P:Digitalis.UndoSystem.UndoStack.Position"/> will change if the <see cref="T:Digitalis.UndoSystem.UndoStack"/>
+            reaches its <see cref="P:Digitalis.UndoSystem.UndoStack.Size"/> and has to be trimmed.</para>
+            </remarks>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.OnCommandStarted(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandStarted"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.OnCommandEnded(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandEnded"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.OnCommandCancelled(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandCancelled"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.OnCommandExecuted(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandExecuted"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.OnCommandRolledBack(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandRolledBack"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Digitalis.UndoSystem.UndoStack.OnCommandDiscarded(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandDiscarded"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.CurrentStack">
+            <summary>
+            Returns the current <see cref="T:Digitalis.UndoSystem.UndoStack"/>.
+            </summary>
+        </member>
+        <member name="E:Digitalis.UndoSystem.UndoStack.CommandStarted">
+            <summary>
+            Occurs when a new command is started.
+            </summary>
+        </member>
+        <member name="E:Digitalis.UndoSystem.UndoStack.CommandEnded">
+            <summary>
+            Occurs when a command is ended.
+            </summary>
+        </member>
+        <member name="E:Digitalis.UndoSystem.UndoStack.CommandCancelled">
+            <summary>
+            Occurs when a command is cancelled.
+            </summary>
+        </member>
+        <member name="E:Digitalis.UndoSystem.UndoStack.CommandExecuted">
+            <summary>
+            Occurs when a command is executed.
+            </summary>
+        </member>
+        <member name="E:Digitalis.UndoSystem.UndoStack.CommandRolledBack">
+            <summary>
+            Occurs when a command is rolled back.
+            </summary>
+        </member>
+        <member name="E:Digitalis.UndoSystem.UndoStack.CommandDiscarded">
+            <summary>
+            Occurs when a command is discarded from the <see cref="T:Digitalis.UndoSystem.UndoStack"/>.
+            </summary>
+            <remarks>
+            If a new command is <see cref="M:Digitalis.UndoSystem.UndoStack.EndCommand">added</see> to an <see cref="T:Digitalis.UndoSystem.UndoStack"/> which has reached its <see cref="P:Digitalis.UndoSystem.UndoStack.Size">capacity</see>,
+            the oldest command in the stack is discarded.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.CurrentCommand">
+            <summary>
+            Gets the identifier of the current command, if any.
+            </summary>
+            <remarks>
+            This is only valid while <see cref="P:Digitalis.UndoSystem.UndoStack.IsCommandStarted"/> is <b>true</b>; otherwise it returns <c>null</c>.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.Item(System.Int32)">
+            <summary>
+            Gets the identifier of the specified command.
+            </summary>
+            <param name="index">The index of the command to get.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="index"/> is less than 0 or greater than or equal to <see cref="P:Digitalis.UndoSystem.UndoStack.Count"/>.</exception>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.Count">
+            <summary>
+            Gets the number of commands in the <see cref="T:Digitalis.UndoSystem.UndoStack"/>.
+            </summary>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.CanUndo">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Digitalis.UndoSystem.UndoStack"/> contains commands which may be undone.
+            </summary>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.CanRedo">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Digitalis.UndoSystem.UndoStack"/> contains commands which may be redone.
+            </summary>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.HasUnsavedChanges">
+            <summary>
+            Gets a value indicating whether any commands have been executed, undone or redone since the last call to <see cref="M:Digitalis.UndoSystem.UndoStack.SetSavePoint"/>.
+            </summary>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.IsCommandStarted">
+            <summary>
+            Gets a value indicating whether there is a current command.
+            </summary>
+            <remarks>
+            This returns <b>true</b> if called between <see cref="M:Digitalis.UndoSystem.UndoStack.StartCommand(System.Object)"/> and <see cref="M:Digitalis.UndoSystem.UndoStack.EndCommand"/>/<see cref="M:Digitalis.UndoSystem.UndoStack.CancelCommand"/>, and <b>false</b> otherwise.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.IsCommandSuspended">
+            <summary>
+            Gets a value indicating whether the current command is suspended.
+            </summary>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.IsUndoing">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Digitalis.UndoSystem.UndoStack"/> is <see cref="M:Digitalis.UndoSystem.UndoStack.Undo">undoing</see> a command.
+            </summary>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.IsRedoing">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Digitalis.UndoSystem.UndoStack"/> is <see cref="M:Digitalis.UndoSystem.UndoStack.Redo">redoing</see> a command.
+            </summary>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.Commands">
+            <summary>
+            Gets the list of command identifiers.
+            </summary>
+            <remarks>
+            Commands are ordered from oldest to newest, with indices less than or equal to <see cref="P:Digitalis.UndoSystem.UndoStack.Position"/> being those which are
+            available for undoing and those greater than <see cref="P:Digitalis.UndoSystem.UndoStack.Position"/> being available for redoing.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.Size">
+            <summary>
+            Gets or sets the maximum number of commands which may be stored.
+            </summary>
+            <remarks>
+            If this is set to a value less than the number of commands currently stored, the oldest will be discarded.
+            <para>To have no limit on the number of commands, set to zero.</para>
+            </remarks>
+        </member>
+        <member name="P:Digitalis.UndoSystem.UndoStack.Position">
+            <summary>
+            Gets or sets the current cursor position in the <see cref="T:Digitalis.UndoSystem.UndoStack"/>.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">A command is started on the <see cref="T:Digitalis.UndoSystem.UndoStack"/>.</exception>
+            <remarks>
+            This is the index into the <see cref="T:Digitalis.UndoSystem.UndoStack"/> of the command that will be undone on the next call to
+            <see cref="M:Digitalis.UndoSystem.UndoStack.Undo"/>. If there are no commands to undo, it returns -1.
+            <para>Commands are ordered from oldest to newest, with indices less than or equal to <see cref="P:Digitalis.UndoSystem.UndoStack.Position"/> being those which are
+            available for undoing and those greater than <see cref="P:Digitalis.UndoSystem.UndoStack.Position"/> being available for redoing.</para>
+            <para>If successful, setting this property raises either the <see cref="E:Digitalis.UndoSystem.UndoStack.CommandExecuted"/> or <see cref="E:Digitalis.UndoSystem.UndoStack.CommandRolledBack"/> event.</para>
+            </remarks>
+        </member>
+    </members>
+</doc>

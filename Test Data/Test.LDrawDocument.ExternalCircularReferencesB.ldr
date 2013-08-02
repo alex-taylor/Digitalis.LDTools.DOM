@@ -1,0 +1,5 @@
+0 Test External Circular-Reference Detection - File B
+0 Name: Test.LDrawDocument.ExternalCircularReferencesB.ldr
+0 Unofficial Model
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 Test.LDrawDocument.ExternalCircularReferencesA.ldr

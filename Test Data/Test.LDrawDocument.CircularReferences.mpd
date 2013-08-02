@@ -1,0 +1,17 @@
+0 FILE bad.ldr
+0 Test Internal Circular-Reference Detection
+0 Unofficial Model
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 bad2.ldr
+
+
+
+0 FILE bad2.ldr
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 bad3.ldr
+
+
+
+0 FILE bad3.ldr
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 bad.ldr

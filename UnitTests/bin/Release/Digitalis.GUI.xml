@@ -1,0 +1,1383 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Digitalis.GUI</name>
+    </assembly>
+    <members>
+        <member name="F:Digitalis.GUI.Forms.ProgressDialogForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ProgressDialogForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ProgressDialogForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Digitalis.GUI.Controls.ResizableToolStripDropDown">
+            <summary>
+            A resizable <see cref="T:System.Windows.Forms.ToolStripDropDown"/>.
+            </summary>
+            <remarks>
+            <see cref="T:Digitalis.GUI.Controls.ResizableToolStripDropDown"/> extends <see cref="T:System.Windows.Forms.ToolStripDropDown"/> to support resizing by the user at run-time.
+            Resizing is constrained to the limits set by <see cref="P:System.Windows.Forms.Control.MaximumSize"/> and <see cref="P:System.Windows.Forms.Control.MinimumSize"/>.
+            If they have the same value, resizing is disabled. To have no upper limit, set <see cref="P:System.Windows.Forms.Control.MaximumSize">MaximumSize</see> to <b>(0, 0)</b>.
+            <p>Initially, the dropdown is sized to accomodate its <see cref="P:System.Windows.Forms.ToolStrip.Items">Items</see>, or to its
+            <see cref="P:System.Windows.Forms.Control.MinimumSize">MinimumSize</see>, whichever is larger.</p>
+            <p>If any of the <see cref="P:System.Windows.Forms.ToolStrip.Items">Items</see> has its <see cref="P:System.Windows.Forms.Control.Dock"/> set to
+            <see cref="F:System.Windows.Forms.DockStyle.Fill"/>, it will automatically be resized when <see cref="T:System.Drawing.Size"/> changes; otherwise the caller should handle the
+            <see cref="E:System.Windows.Forms.Control.SizeChanged"/> event.</p>
+            </remarks>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Digitalis.GUI.Controls.ResizableToolStripDropDown"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.Show">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.Show(System.Drawing.Point)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.Show(System.Windows.Forms.Control,System.Drawing.Point)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.Show(System.Int32,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.Show(System.Drawing.Point,System.Windows.Forms.ToolStripDropDownDirection)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.Show(System.Windows.Forms.Control,System.Drawing.Point,System.Windows.Forms.ToolStripDropDownDirection)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.Show(System.Windows.Forms.Control,System.Int32,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.Show(System.Windows.Forms.Control)">
+            <summary>
+            Displays the <see cref="T:Digitalis.GUI.Controls.ResizableToolStripDropDown"/> at the default position relative to the specified control.
+            </summary>
+            <param name="control">The control that is the reference point for the <see cref="T:Digitalis.GUI.Controls.ResizableToolStripDropDown"/> position.</param>
+            <remarks>
+            By default, the <see cref="T:Digitalis.GUI.Controls.ResizableToolStripDropDown"/> is displayed with its upper-left corner positioned immediately below the lower-left
+            corner of <paramref name="control"/>. If there is insufficient screen-space available below the control, the <see cref="T:Digitalis.GUI.Controls.ResizableToolStripDropDown"/>
+            will be positioned immediately above instead. If there is insufficient screen-space available to the right of the control, the <see cref="T:Digitalis.GUI.Controls.ResizableToolStripDropDown"/>
+            will be positioned aligned with the control's right edge.
+            <p>This is the recommended method to use when showing the dropdown.</p>
+            </remarks>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.OnBackColorChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ResizableToolStripDropDown.WndProc(System.Windows.Forms.Message@)">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.GUI.Controls.ResizableToolStripDropDown.AutoSize">
+            <summary>
+            Infrastructure. This property is not relevant for this class.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.ResizableToolStripDropDown.Padding">
+            <inheritdoc />
+        </member>
+        <member name="T:Digitalis.GUI.Forms.ConfirmationDialog">
+            <summary>
+            An extended MessageBox.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.CreateDialog(System.String)">
+            <summary>
+            Creates a new <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> and registers it.
+            </summary>
+            <param name="id">A unique identifier for the dialog.</param>
+            <returns>The newly-created dialog.</returns>
+            <remarks>
+            When done with the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>, it should either be passed to <see cref="M:Digitalis.GUI.Forms.ConfirmationDialog.DestroyDialog(Digitalis.GUI.Forms.ConfirmationDialog)"/>
+            or <see cref="M:Digitalis.GUI.Forms.ConfirmationDialog.Dispose">disposed of</see>.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.DestroyDialog(System.String)">
+            <summary>
+            Destroys a <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+            <param name="id">The ID of the dialog to destroy."</param>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.DestroyDialog(Digitalis.GUI.Forms.ConfirmationDialog)">
+            <summary>
+            Destroys a <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+            <param name="dialog">The dialog to destroy."</param>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.GetDialog(System.String)">
+            <summary>
+            Returns the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> with the specified ID.
+            </summary>
+            <param name="id">The ID of the dialog to return.</param>
+            <returns>The specified dialog.</returns>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.Show(System.String,System.String,Digitalis.GUI.Forms.ConfirmationDialogButtons,System.Drawing.Icon)">
+            <summary>
+            Creates a temporary <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> and displays it.
+            </summary>
+            <param name="text">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Text"/> for the dialog.</param>
+            <param name="query">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Query"/> for the dialog.</param>
+            <param name="buttons">The buttons for the dialog.</param>
+            <param name="icon">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Icon"/> for the dialog.</param>
+            <returns>The result chosen by the user.</returns>
+            <remarks>
+            The <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> is created using the supplied parameters and <see cref="M:Digitalis.GUI.Forms.ConfirmationDialog.Show">shown</see>
+            immediately. This is equivalent to <c>MessageBox.Show()</c>.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.Show(System.String,System.String,System.String,Digitalis.GUI.Forms.ConfirmationDialogButtons,System.Drawing.Icon)">
+            <summary>
+            Creates a temporary <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> and displays it.
+            </summary>
+            <param name="text">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Text"/> for the dialog.</param>
+            <param name="query">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Query"/> for the dialog.</param>
+            <param name="details">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Details"/> for the dialog.</param>
+            <param name="buttons">The buttons for the dialog.</param>
+            <param name="icon">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Icon"/> for the dialog.</param>
+            <returns>The result chosen by the user.</returns>
+            <remarks>
+            The <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> is created using the supplied parameters and <see cref="M:Digitalis.GUI.Forms.ConfirmationDialog.Show">shown</see>
+            immediately. This is equivalent to <c>MessageBox.Show()</c>.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.Show(System.String,System.String,System.String,Digitalis.GUI.Forms.ConfirmationDialogButtons[],System.Drawing.Icon)">
+            <summary>
+            Creates a temporary <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> and displays it.
+            </summary>
+            <param name="text">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Text"/> for the dialog.</param>
+            <param name="query">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Query"/> for the dialog.</param>
+            <param name="details">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Details"/> for the dialog.</param>
+            <param name="results">The results for the dialog.</param>
+            <param name="icon">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Icon"/> for the dialog.</param>
+            <returns>The result chosen by the user.</returns>
+            <remarks>
+            The <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> is created using the supplied parameters and <see cref="M:Digitalis.GUI.Forms.ConfirmationDialog.Show">shown</see>
+            immediately. This is equivalent to <c>MessageBox.Show()</c>.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.String,Digitalis.GUI.Forms.ConfirmationDialogButtons[],System.Drawing.Icon)">
+            <summary>
+            Creates a temporary <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> and displays it.
+            </summary>
+            <param name="owner">An implementation of <see cref="T:System.Windows.Forms.IWin32Window"/> that will own the dialog.</param>
+            <param name="text">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Text"/> for the dialog.</param>
+            <param name="query">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Query"/> for the dialog.</param>
+            <param name="details">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Details"/> for the dialog.</param>
+            <param name="results">The results for the dialog.</param>
+            <param name="icon">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Icon"/> for the dialog.</param>
+            <returns>The result chosen by the user.</returns>
+            <remarks>
+            The <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> is created using the supplied parameters and <see cref="M:Digitalis.GUI.Forms.ConfirmationDialog.Show">shown</see>
+            immediately. This is equivalent to <c>MessageBox.Show()</c>.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.String,Digitalis.GUI.Forms.ConfirmationDialogButtons,System.Drawing.Icon)">
+            <summary>
+            Creates a temporary <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> and displays it.
+            </summary>
+            <param name="owner">An implementation of <see cref="T:System.Windows.Forms.IWin32Window"/> that will own the dialog.</param>
+            <param name="text">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Text"/> for the dialog.</param>
+            <param name="query">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Query"/> for the dialog.</param>
+            <param name="details">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Details"/> for the dialog.</param>
+            <param name="buttons">The buttons for the dialog.</param>
+            <param name="icon">The <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Icon"/> for the dialog.</param>
+            <returns>The result chosen by the user.</returns>
+            <remarks>
+            The <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> is created using the supplied parameters and <see cref="M:Digitalis.GUI.Forms.ConfirmationDialog.Show">shown</see>
+            immediately. This is equivalent to <c>MessageBox.Show()</c>.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.Show">
+            <summary>
+            Shows the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+            <returns>The response from the dialog.</returns>
+            <remarks>
+            If <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Suppressed"/> is <b>true</b> and <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.AcceptResult"/> is not <c>null</c>, the dialog
+            is not shown; instead, the <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.AcceptResult"/> is returned immediately.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.Show(System.Windows.Forms.IWin32Window)">
+            <summary>
+            Shows the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> with the specified owner.
+            </summary>
+            <returns>The response from the dialog.</returns>
+            <remarks>
+            If <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.Suppressed"/> is <b>true</b> and <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.AcceptResult"/> is not <c>null</c>, the dialog
+            is not shown; instead, the <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.AcceptResult"/> is returned immediately.
+            </remarks>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.AddButton(System.String,System.Object,System.String)">
+            <summary>
+            Adds a button to the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+            <param name="text">The text for the button.</param>
+            <param name="result">The result to be returned when the button is clicked.</param>
+            <param name="helpText">The text to be displayed in the ToolTip for this button.</param>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.AddButton(System.String,System.Object)">
+            <summary>
+            Adds a button to the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+            <param name="text">The text for the button.</param>
+            <param name="result">The result to be returned when the button is clicked.</param>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.AddButton(System.String)">
+            <summary>
+            Adds a button to the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+            <param name="text">The text for the button.</param>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.AddButtons(Digitalis.GUI.Forms.ConfirmationDialogButtons[])">
+            <summary>
+            Adds standard buttons to the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+            <param name="buttons">The standard buttons to add.</param>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialog.AddButton(Digitalis.GUI.Forms.ConfirmationDialogButtons)">
+            <summary>
+            Adds a standard button or buttons to the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+            <param name="button">The standard button or buttons to add.</param>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ConfirmationDialog.Dialogs">
+            <summary>
+            Returns an enumeration of the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>s currently in existence.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ConfirmationDialog.ID">
+            <summary>
+            Gets the ID of the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ConfirmationDialog.Text">
+            <summary>
+            Gets or sets the title of the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+            <remarks>
+            This property is mandatory.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ConfirmationDialog.Query">
+            <summary>
+            Gets or sets the query text of the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+            <remarks>
+            This property is mandatory.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ConfirmationDialog.Details">
+            <summary>
+            Gets or sets the details text of the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+            <remarks>
+            This property is optional.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ConfirmationDialog.Icon">
+            <summary>
+            Gets or sets the icon to show in the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ConfirmationDialog.ShowSuppressOption">
+            <summary>
+            Gets or sets a value indicating whether the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> should display the 'suppress' option.
+            </summary>
+            <remarks>
+            If <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.AcceptResult"/> is <b>null</b>, the option will not be displayed.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ConfirmationDialog.SuppressText">
+            <summary>
+            Gets or sets the text to display next to the <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.ShowSuppressOption">suppress</see> checkbox.
+            </summary>
+            <remarks>
+            Default value is <c>"Don't show this message again"</c>.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ConfirmationDialog.Suppressed">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> is suppressed.
+            </summary>
+            <remarks>
+            If <b>true</b> and <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.AcceptResult"/> is not <c>null</c>, the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> will not be shown when
+            <see cref="M:Digitalis.GUI.Forms.ConfirmationDialog.Show"/> is called; instead, the <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.AcceptResult"/> is returned immediately.
+            <para>The initial value is <b>false</b>. If the user selects the <see cref="P:Digitalis.GUI.Forms.ConfirmationDialog.ShowSuppressOption"/> checkbox before
+            ending the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>, it will be set to <b>true</b>.</para>
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ConfirmationDialog.AcceptResult">
+            <summary>
+            Gets or sets the value that is returned when the user presses the ENTER key or the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> is suppressed.
+            </summary>
+            <exception cref="T:System.ArgumentException">The value is not assigned to one of the buttons in the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.</exception>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ConfirmationDialog.CancelResult">
+            <summary>
+            Gets or sets the value that is returned when the user presses the ESC key or the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> is closed.
+            </summary>
+            <exception cref="T:System.ArgumentException">The value is not assigned to one of the buttons in the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.</exception>
+            <remarks>
+            If this property is set, the <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> will have a 'close' button.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ConfirmationDialog.Visible">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/> is open.
+            </summary>
+        </member>
+        <member name="T:Digitalis.GUI.Controls.BusySpinner">
+            <summary>
+            Represents an animated image to indicate to the user that a lengthy operation is in progress.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.BusySpinner.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.BusySpinner.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.BusySpinner.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.BusySpinner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Digitalis.GUI.Controls.BusySpinner"/> class.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.BusySpinner.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.GUI.Controls.BusySpinner.Animating">
+            <summary>
+            Gets or sets a value indicating whether the <see cref="T:Digitalis.GUI.Controls.BusySpinner"/> is currently animating.
+            </summary>
+            <remarks>
+            Default value is <b>false</b>.
+            </remarks>
+        </member>
+        <member name="T:Digitalis.GUI.SeparatorBar">
+            <summary>
+            Draws a recessed 2-pixel high horizontal line with an optional label above it.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.SeparatorBar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Digitalis.GUI.SeparatorBar"/> class.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.SeparatorBar.OnTextChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.SeparatorBar.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="F:Digitalis.GUI.SeparatorBar.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.SeparatorBar.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Digitalis.GUI.SeparatorBar.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.SeparatorBar.Text">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.GUI.SeparatorBar.MaximumSize">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.GUI.SeparatorBar.MinimumSize">
+            <inheritdoc />
+        </member>
+        <member name="T:Digitalis.GUI.Controls.NumericTextBox">
+            <summary>
+            Represents a text box control which only accepts numeric input.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.NumericTextBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Digitalis.GUI.Controls.NumericTextBox"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.NumericTextBox.OnValueChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Digitalis.GUI.Controls.NumericTextBox.ValueChanged"/> event.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.NumericTextBox.OnEnabledChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.NumericTextBox.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.NumericTextBox.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="F:Digitalis.GUI.Controls.NumericTextBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.NumericTextBox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.NumericTextBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.Value">
+            <summary>
+            Gets or sets the current value of the <see cref="T:Digitalis.GUI.Controls.NumericTextBox"/>.
+            </summary>
+            <remarks>
+            When setting, the supplied value will be clipped to the current values of <see cref="P:Digitalis.GUI.Controls.NumericTextBox.MinimumValue"/> and <see cref="P:Digitalis.GUI.Controls.NumericTextBox.MaximumValue"/>.
+            If no value is required, set to <c>null</c>.
+            <para>Defaults to <c>null</c>.</para>
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.DefaultValue">
+            <summary>
+            Gets or sets the default value of the <see cref="T:Digitalis.GUI.Controls.NumericTextBox"/>.
+            </summary>
+            <remarks>
+            If the contents of the <see cref="T:Digitalis.GUI.Controls.NumericTextBox"/> are cleared, either by the user or programmatically by setting <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Value"/>
+            to <c>null</c>, <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Value"/> will be set to <b>DefaultValue</b>.
+            <para>When setting, the supplied value will be clipped to the current values of <see cref="P:Digitalis.GUI.Controls.NumericTextBox.MinimumValue"/> and <see cref="P:Digitalis.GUI.Controls.NumericTextBox.MaximumValue"/>.
+            If no value is required, set to <c>null</c>.</para>
+            <para>Defaults to <c>null</c>.</para>
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.MinimumValue">
+            <summary>
+            Gets or sets the minimum value of the <see cref="T:Digitalis.GUI.Controls.NumericTextBox"/>.
+            </summary>
+            <remarks>
+            When setting, if <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Value"/>, <see cref="P:Digitalis.GUI.Controls.NumericTextBox.DefaultValue"/> or <see cref="P:Digitalis.GUI.Controls.NumericTextBox.MaximumValue"/> is less than the supplied value,
+            it will be clipped. If no value is required, set to <c>null</c>.
+            <para>Defaults to <c>null</c>.</para>
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.MaximumValue">
+            <summary>
+            Gets or sets the maximum value of the <see cref="T:Digitalis.GUI.Controls.NumericTextBox"/>.
+            </summary>
+            <remarks>
+            When setting, if <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Value"/>, <see cref="P:Digitalis.GUI.Controls.NumericTextBox.DefaultValue"/> or <see cref="P:Digitalis.GUI.Controls.NumericTextBox.MinimumValue"/> is greater than the supplied value,
+            it will be clipped. If no value is required, set to <c>null</c>.
+            <para>Defaults to <c>null</c>.</para>
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.Format">
+            <summary>
+            Gets or sets the number format of the <see cref="T:Digitalis.GUI.Controls.NumericTextBox"/>.
+            </summary>
+            <remarks>
+            This defines the format in which numbers may be entered by the user and in which <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Value"/> will be displayed.
+            It does not impose any constraints on <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Value"/> itself.
+            <para>Setting this property will reset <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Value"/> to <see cref="P:Digitalis.GUI.Controls.NumericTextBox.DefaultValue"/>.</para>
+            <para>Defaults to <see cref="F:Digitalis.GUI.Controls.NumericTextBoxFormat.SignedDecimal"/>.</para>
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.IntegerPlaces">
+            <summary>
+            Gets or sets the maximum number of integer digits which may be entered.
+            </summary>
+            <remarks>
+            Set to <c>0</c> for unlimited digits. If <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Format"/> is <see cref="F:Digitalis.GUI.Controls.NumericTextBoxFormat.Hexadecimal"/>, the
+            maximum number of integer digits that can be displayed is 8.
+            <para>Setting this property will reset <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Value"/> to <see cref="P:Digitalis.GUI.Controls.NumericTextBox.DefaultValue"/>.</para>
+            <para>Defaults to <c>0</c>.</para>
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.DecimalPlaces">
+            <summary>
+            Gets or sets the maximum number of decimal digits which may be entered.
+            </summary>
+            <remarks>
+            If <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Format"/> is not set to either <see cref="F:Digitalis.GUI.Controls.NumericTextBoxFormat.SignedDecimal"/> or <see cref="F:Digitalis.GUI.Controls.NumericTextBoxFormat.UnsignedDecimal"/>,
+            this property is ignored.
+            <para>The value must be in the range 1..15.</para>
+            <para>Setting this property will reset <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Value"/> to <see cref="P:Digitalis.GUI.Controls.NumericTextBox.DefaultValue"/>.</para>
+            <para>Defaults to <c>5</c>.</para>
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.DisplayLeadingZeroes">
+            <summary>
+            Gets or sets a value indicating whether leading zeroes should be displayed.
+            </summary>
+            <remarks>
+            If <b>true</b>, the current <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Value"/> will be displayed padded out with leading zeroes up to the current
+            number of <see cref="P:Digitalis.GUI.Controls.NumericTextBox.IntegerPlaces"/>. If <see cref="P:Digitalis.GUI.Controls.NumericTextBox.IntegerPlaces"/> is <c>0</c>, no leading zeroes will be displayed.
+            <para>If <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Format"/> is <see cref="F:Digitalis.GUI.Controls.NumericTextBoxFormat.Hexadecimal"/>, this property is ignored.</para>
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.SelectionStart">
+            <summary>
+            Gets or sets the starting point of text selected in the <see cref="T:Digitalis.GUI.Controls.NumericTextBox"/>.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.SelectionLength">
+            <summary>
+            Gets or sets the number of characters selected selected in the <see cref="T:Digitalis.GUI.Controls.NumericTextBox"/>.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.BorderStyle">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.BackColor">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.ForeColor">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericTextBox.Focused">
+            <inheritdoc />
+        </member>
+        <member name="E:Digitalis.GUI.Controls.NumericTextBox.ValueChanged">
+            <summary>
+            Occurs when the value of <see cref="P:Digitalis.GUI.Controls.NumericTextBox.Value"/> changes.
+            </summary>
+        </member>
+        <member name="T:Digitalis.GUI.Controls.NumericTextBoxFormat">
+            <summary>
+            Specifies the number format of a <see cref="T:Digitalis.GUI.Controls.NumericTextBox"/> control.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.NumericTextBoxFormat.SignedInteger">
+            <summary>
+            Only the digits 0..9 and the <see cref="P:System.Globalization.NumberFormatInfo.NegativeSign">negative-sign character</see> of the
+            <see cref="P:System.Globalization.CultureInfo.CurrentCulture">current culture</see>'s <see cref="P:System.Globalization.CultureInfo.NumberFormat">NumberFormat</see>
+            may be entered.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.NumericTextBoxFormat.UnsignedInteger">
+            <summary>
+            Only the digits 0..9 may be entered.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.NumericTextBoxFormat.SignedDecimal">
+            <summary>
+            Only the digits 0..9, the <see cref="P:System.Globalization.NumberFormatInfo.NegativeSign">negative-sign character</see> and
+            <see cref="P:System.Globalization.NumberFormatInfo.NumberDecimalSeparator">decimal-separator character</see> of the
+            <see cref="P:System.Globalization.CultureInfo.CurrentCulture">current culture</see>'s <see cref="P:System.Globalization.CultureInfo.NumberFormat">NumberFormat</see>
+            may be entered.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.NumericTextBoxFormat.UnsignedDecimal">
+            <summary>
+            Only the digits 0..9 and the <see cref="P:System.Globalization.NumberFormatInfo.NumberDecimalSeparator">decimal-separator character</see> of the
+            <see cref="P:System.Globalization.CultureInfo.CurrentCulture">current culture</see>'s <see cref="P:System.Globalization.CultureInfo.NumberFormat">NumberFormat</see>
+            may be entered.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.NumericTextBoxFormat.Hexadecimal">
+            <summary>
+            Only the digits 0..9 and the upper- and lower-case letters A..F may be entered.
+            </summary>
+        </member>
+        <member name="T:Digitalis.GUI.Controls.DoubleBufferedPanel">
+            <summary>
+            Represents a panel with double-buffered rendering enabled.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.DoubleBufferedPanel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Digitalis.GUI.Controls.DoubleBufferedPanel"/> class with default values.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.DoubleBufferedPanel.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.DoubleBufferedPanel.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.DoubleBufferedPanel.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.DoubleBufferedPanel.EnableDoubleClick">
+            <summary>
+            Enables or disables double-click support.
+            </summary>
+        </member>
+        <member name="T:Digitalis.GUI.Forms.ConfirmationDialogButtons">
+            <summary>
+            Specifies identifiers to indicate the return value of a button in a <see cref="T:Digitalis.GUI.Forms.ConfirmationDialog"/>.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.OK">
+            <summary>
+            The button's return value is OK (usually sent from a button labeled OK).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.Cancel">
+            <summary>
+            The button's return value is Cancel (usually sent from a button labeled Cancel).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.Close">
+            <summary>
+            The button's return value is Close (usually sent from a button labeled Close).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.Continue">
+            <summary>
+            The button's return value is Continue (usually sent from a button labeled Continue).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.Yes">
+            <summary>
+            The button's return value is Yes (usually sent from a button labeled Yes).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.No">
+            <summary>
+            The button's return value is No (usually sent from a button labeled No).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.Abort">
+            <summary>
+            The button's return value is Abort (usually sent from a button labeled Abort).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.Retry">
+            <summary>
+            The button's return value is Retry (usually sent from a button labeled Retry).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.Ignore">
+            <summary>
+            The button's return value is Ignore (usually sent from a button labeled Ignore).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.Save">
+            <summary>
+            The button's return value is Save (usually sent from a button labeled Save).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.DontSave">
+            <summary>
+            The button's return value is DontSave (usually sent from a button labeled Don't Save).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.Exit">
+            <summary>
+            The button's return value is Exit (usually sent from a button labeled Exit).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.OKCancel">
+            <summary>
+            The buttons' return values are OK (usually sent from a button labeled OK) and Cancel (usually sent from a button labeled Cancel).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.YesNo">
+            <summary>
+            The buttons' return values are Yes (usually sent from a button labeled Yes) and No (usually sent from a button labeled No).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.YesNoCancel">
+            <summary>
+            The buttons' return values are Yes (usually sent from a button labeled Yes), No (usually sent from a button labeled No) and Cancel (usually sent from a button labeled Cancel).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.AbortRetryIgnore">
+            <summary>
+            The buttons' return values are Abort (usually sent from a button labeled Abort), Retry (usually sent from a button labeled Retry) and Ignore (usually sent from a button labeled Ignore).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.SaveDontSave">
+            <summary>
+            The buttons' return values are Save (usually sent from a button labeled Save) and DontSave (usually sent from a button labeled Don't Save).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.SaveDontSaveCancel">
+            <summary>
+            The buttons' return values are Save (usually sent from a button labeled Save), DontSave (usually sent from a button labeled Don't Save) and Cancel (usually sent from a button labeled Cancel).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.ContinueExit">
+            <summary>
+            The buttons' return values are Continue (usually sent from a button labeled Continue) and Exit (usually sent from a button labeled Exit).
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogButtons.RetryCancel">
+            <summary>
+            The buttons' return values are Retry (usually sent from a button labeled Retry) and Cancel (usually sent from a button labeled Cancel).
+            </summary>
+        </member>
+        <member name="T:Digitalis.GUI.Controls.NumericUpDownSlider">
+            <summary>
+            Represents a <see cref="T:System.Windows.Forms.NumericUpDown">NumericUpDown</see> which incorporates a slider control to adjust its value.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.NumericUpDownSlider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Digitalis.GUI.Controls.NumericUpDownSlider"/> class.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.NumericUpDownSlider.DownButton">
+            <summary>
+            Decrements the value of the <see cref="T:Digitalis.GUI.Controls.NumericUpDownSlider"/> control.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.NumericUpDownSlider.UpButton">
+            <summary>
+            Increments the value of the <see cref="T:Digitalis.GUI.Controls.NumericUpDownSlider"/> control.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.NumericUpDownSlider.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.NumericUpDownSlider.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.NumericUpDownSlider.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericUpDownSlider.Accelerations">
+            <summary>
+            Gets a collection of sorted acceleration objects for the <see cref="T:Digitalis.GUI.Controls.NumericUpDownSlider"/> control.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericUpDownSlider.UpDownAlign">
+            <summary>
+            Gets or sets the alignment of the up and down buttons on the <see cref="T:Digitalis.GUI.Controls.NumericUpDownSlider"/> control.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericUpDownSlider.Value">
+            <summary>
+            Gets or sets the value assigned to the <see cref="T:Digitalis.GUI.Controls.NumericUpDownSlider"/> control.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericUpDownSlider.Maximum">
+            <summary>
+            Gets or sets the maximum value for the <see cref="T:Digitalis.GUI.Controls.NumericUpDownSlider"/> control.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericUpDownSlider.Minimum">
+            <summary>
+            Gets or sets the minimum allowed value for the <see cref="T:Digitalis.GUI.Controls.NumericUpDownSlider"/> control.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericUpDownSlider.Increment">
+            <summary>
+            Gets or sets the value to increment or decrement the <see cref="T:Digitalis.GUI.Controls.NumericUpDownSlider"/> control by when the up or down buttons are clicked.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericUpDownSlider.Hexadecimal">
+            <summary>
+            Gets or sets a value indicating whether the <see cref="T:Digitalis.GUI.Controls.NumericUpDownSlider"/> control should display the value it contains in hexadecimal format.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericUpDownSlider.InterceptArrowKeys">
+            <summary>
+            Gets or sets a value indicating whether the user can use the UP ARROW and DOWN ARROW keys to select values.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericUpDownSlider.ThousandsSeparator">
+            <summary>
+            Gets or sets a value indicating whether a thousands separator is displayed in the <see cref="T:Digitalis.GUI.Controls.NumericUpDownSlider"/> control when appropriate.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericUpDownSlider.ReadOnly">
+            <summary>
+            Gets or sets a value indicating whether the text can be changed by the use of the up or down buttons only.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericUpDownSlider.DecimalPlaces">
+            <summary>
+            Gets or sets the number of decimal places to display in the <see cref="T:Digitalis.GUI.Controls.NumericUpDownSlider"/> control.
+            </summary>
+        </member>
+        <member name="E:Digitalis.GUI.Controls.NumericUpDownSlider.ValueChanged">
+            <summary>
+            Occurs when the Value property has been changed in some way.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.NumericUpDownSlider.CreateParams">
+            <inherit />
+        </member>
+        <member name="T:Digitalis.GUI.Controls.QuadSplitterContainer">
+            <summary>
+            Represents a control consisting of a container whose display area may be divided into either two or four resizable panels.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainer.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainer.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainer.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainer.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainer.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainer.OnMouseLeave(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="E:Digitalis.GUI.Controls.QuadSplitterContainer.HorizontalPositionChanged">
+            <summary>
+            Occurs when <see cref="P:Digitalis.GUI.Controls.QuadSplitterContainer.HorizontalPosition"/> changes.
+            </summary>
+        </member>
+        <member name="E:Digitalis.GUI.Controls.QuadSplitterContainer.VerticalPositionChanged">
+            <summary>
+            Occurs when <see cref="P:Digitalis.GUI.Controls.QuadSplitterContainer.VerticalPosition"/> changes.
+            </summary>
+        </member>
+        <member name="E:Digitalis.GUI.Controls.QuadSplitterContainer.SplitterThicknessChanged">
+            <summary>
+            Occurs when <see cref="P:Digitalis.GUI.Controls.QuadSplitterContainer.SplitterThickness"/> changes.
+            </summary>
+        </member>
+        <member name="E:Digitalis.GUI.Controls.QuadSplitterContainer.QuadrantChanged">
+            <summary>
+            Occurs when <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer.Quadrant"/> changes.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.QuadSplitterContainer.TopLeft">
+            <summary>
+            Gets the <see cref="T:System.Windows.Forms.Panel"/> which appears in the top-left quadrant of the <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/>.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.QuadSplitterContainer.TopRight">
+            <summary>
+            Gets the <see cref="T:System.Windows.Forms.Panel"/> which appears in the top-right quadrant of the <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/>.
+            </summary>
+            <remarks>
+            If <see cref="P:Digitalis.GUI.Controls.QuadSplitterContainer.Mode"/> is set to <see cref="F:Digitalis.GUI.Controls.QuadSplitterContainer.SplitterMode.Horizontal"/> this panel is not used.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.QuadSplitterContainer.BottomLeft">
+            <summary>
+            Gets the <see cref="T:System.Windows.Forms.Panel"/> which appears in the bottom-left quadrant of the <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/>.
+            </summary>
+            <remarks>
+            If <see cref="P:Digitalis.GUI.Controls.QuadSplitterContainer.Mode"/> is set to <see cref="F:Digitalis.GUI.Controls.QuadSplitterContainer.SplitterMode.Vertical"/> this panel is not used.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.QuadSplitterContainer.BottomRight">
+            <summary>
+            Gets the <see cref="T:System.Windows.Forms.Panel"/> which appears in the bottom-right quadrant of the <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/>.
+            </summary>
+            <remarks>
+            If <see cref="P:Digitalis.GUI.Controls.QuadSplitterContainer.Mode"/> is set to <see cref="F:Digitalis.GUI.Controls.QuadSplitterContainer.SplitterMode.Horizontal"/> or <see cref="F:Digitalis.GUI.Controls.QuadSplitterContainer.SplitterMode.Vertical"/> this panel is not used.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.QuadSplitterContainer.Mode">
+            <summary>
+            Gets or sets whether the <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/> is divided into four or two panels.
+            </summary>
+            <remarks>
+            Defaults to <see cref="F:Digitalis.GUI.Controls.QuadSplitterContainer.SplitterMode.Quad"/>.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.QuadSplitterContainer.HorizontalPosition">
+            <summary>
+            Gets or sets the position of the horizontal divider as a percentage of the <see cref="P:System.Windows.Forms.Control.Height"/> of the <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/>.
+            </summary>
+            <remarks>
+            Default value is 50%.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.QuadSplitterContainer.VerticalPosition">
+            <summary>
+            Gets or sets the position of the vertical divider as a percentage of the <see cref="P:System.Windows.Forms.Control.Width"/> of the <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/>.
+            </summary>
+            <remarks>
+            Default value is 50%.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.QuadSplitterContainer.SplitterThickness">
+            <summary>
+            Gets or sets the thickness of the dividers in pixels.
+            </summary>
+            <remarks>
+            Default value is 4.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Controls.QuadSplitterContainer.Maximised">
+            <summary>
+            Gets or sets which panel is currently occupying the entire display area of the <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/>.
+            </summary>
+            <remarks>
+            Defaults to <see cref="F:Digitalis.GUI.Controls.QuadSplitterContainer.Quadrant.None"/>.
+            </remarks>
+        </member>
+        <member name="T:Digitalis.GUI.Controls.QuadSplitterContainer.Quadrant">
+            <summary>
+            Specifies a value indicating which panel of the <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/> is currently maximised.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.QuadSplitterContainer.Quadrant.None">
+            <summary>
+            No panel is maximised.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.QuadSplitterContainer.Quadrant.TopLeft">
+            <summary>
+            The top-left panel is maximised.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.QuadSplitterContainer.Quadrant.TopRight">
+            <summary>
+            The top-right panel is maximised.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.QuadSplitterContainer.Quadrant.BottomLeft">
+            <summary>
+            The bottom-left panel is maximised.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.QuadSplitterContainer.Quadrant.BottomRight">
+            <summary>
+            The bottom-right panel is maximised.
+            </summary>
+        </member>
+        <member name="T:Digitalis.GUI.Controls.QuadSplitterContainer.SplitterMode">
+            <summary>
+            Specifies a value indicating whether the <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/> is divided into four or two panels.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.QuadSplitterContainer.SplitterMode.Quad">
+            <summary>
+            The <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/> is divided into four panels.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.QuadSplitterContainer.SplitterMode.Vertical">
+            <summary>
+            The <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/> is divided into two vertical panels.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Controls.QuadSplitterContainer.SplitterMode.Horizontal">
+            <summary>
+            The <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/> is divided into two horizontal panels.
+            </summary>
+        </member>
+        <member name="T:Digitalis.GUI.Controls.QuadSplitterContainerDesigner">
+            <summary>
+            Extends the design mode behavior of a <see cref="T:Digitalis.GUI.Controls.QuadSplitterContainer"/> control.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainerDesigner.CanParent(System.Windows.Forms.Control)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainerDesigner.CreateToolCore(System.Drawing.Design.ToolboxItem,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainerDesigner.GetParentForComponent(System.ComponentModel.IComponent)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainerDesigner.Initialize(System.ComponentModel.IComponent)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainerDesigner.InternalControlDesigner(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.QuadSplitterContainerDesigner.NumberOfInternalControlDesigners">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.GUI.Controls.QuadSplitterContainerDesigner.AssociatedComponents">
+            <inheritdoc />
+        </member>
+        <member name="T:Digitalis.GUI.RGBPicker">
+            <summary>
+            A control for selecting an RGB colour-value, with optional transparency-support.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.RGBPicker.TransparencyDisabled">
+            <summary>
+            Specifies that the <see cref="T:Digitalis.GUI.RGBPicker"/> should not support transparent colours.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.RGBPicker.TransparencyVariable">
+            <summary>
+            Specifies that the <see cref="T:Digitalis.GUI.RGBPicker"/> should support a full <c>0..255</c> alpha component.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.RGBPicker.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.RGBPicker.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Digitalis.GUI.RGBPicker.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.RGBPicker.OnValueChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Digitalis.GUI.RGBPicker.ValueChanged"/> event.
+            </summary>
+            <param name="e">The event-args instance containing the event data.</param>
+        </member>
+        <member name="M:Digitalis.GUI.RGBPicker.OnTransparencyModeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Digitalis.GUI.RGBPicker.TransparencyModeChanged"/> event.
+            </summary>
+            <param name="e">The event-args instance containing the event data.</param>
+        </member>
+        <member name="M:Digitalis.GUI.RGBPicker.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Digitalis.GUI.RGBPicker"/> class with default values.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.RGBPicker.MaximumSize">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.GUI.RGBPicker.MinimumSize">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.GUI.RGBPicker.Value">
+            <summary>
+            Gets or sets the RGB value.
+            </summary>
+            <remarks>
+            <para>
+            The behaviour of the <see cref="P:System.Drawing.Color.A">alpha</see> component of <b>Value</b> is determined by <see cref="P:Digitalis.GUI.RGBPicker.TransparencyMode"/>:
+            <list type="table">
+              <listheader>
+                <term>TransparencyMode</term>
+                <term>When getting <b>Value</b></term>
+                <term>When setting <b>Value</b></term>
+              </listheader>
+              <item>
+                <term><see cref="F:Digitalis.GUI.RGBPicker.TransparencyDisabled"/></term>
+                <term><see cref="P:System.Drawing.Color.A"/> is always 255</term>
+                <term><see cref="P:System.Drawing.Color.A"/> is ignored</term>
+              </item>
+              <item>
+                <term><see cref="F:Digitalis.GUI.RGBPicker.TransparencyVariable"/></term>
+                <term><see cref="P:System.Drawing.Color.A"/> is the value set by the user in the UI</term>
+                <term><see cref="P:System.Drawing.Color.A"/> is displayed in the UI</term>
+              </item>
+              <item>
+                <term>Any other value</term>
+                <item>If the user has selected <c>Transparency</c> in the UI, <see cref="P:System.Drawing.Color.A"/> will be set to the current value of <see cref="P:Digitalis.GUI.RGBPicker.TransparencyMode"/></item>
+                <item>If <see cref="P:System.Drawing.Color.A"/> is less than 255 it will be treated as transparent</item>
+              </item>
+            </list>
+            </para>
+            <para>
+            Raises the <see cref="E:Digitalis.GUI.RGBPicker.ValueChanged"/> event when its value changes.
+            </para>
+            <para>
+            Default value is <see cref="P:System.Drawing.Color.White"/>.
+            </para>
+            </remarks>
+        </member>
+        <member name="E:Digitalis.GUI.RGBPicker.ValueChanged">
+            <summary>
+            Occurs when the value of <see cref="P:Digitalis.GUI.RGBPicker.Value"/> changes.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.RGBPicker.TransparencyMode">
+            <summary>
+            Gets or sets the transparency mode.
+            </summary>
+            <remarks>
+            <para>
+            <see cref="T:Digitalis.GUI.RGBPicker"/> supports three basic modes: no transparency, fixed transparency and variable transparency.
+            </para>
+            <para>
+            If <b>TransparencyMode</b> is set to <c>0</c> (or <see cref="F:Digitalis.GUI.RGBPicker.TransparencyDisabled"/>) then the <see cref="P:System.Drawing.Color.A">alpha</see>
+            component of <see cref="P:Digitalis.GUI.RGBPicker.Value"/> is ignored when setting and set to <c>255</c> when getting.
+            </para>
+            <para>
+            If <b>TransparencyMode</b> is set to <c>255</c> (or <see cref="F:Digitalis.GUI.RGBPicker.TransparencyVariable"/>) when the <see cref="P:System.Drawing.Color.A">alpha</see>
+            component of <see cref="P:Digitalis.GUI.RGBPicker.Value"/> may be adjusted freely in the UI.
+            </para>
+            <para>
+            If <b>TransparencyMode</b> is set to any other value, the UI will display a checkbox which specifies whether <see cref="P:Digitalis.GUI.RGBPicker.Value"/> represents a
+            transparent colour. If checked, the <see cref="P:System.Drawing.Color.A">alpha</see> component of <see cref="P:Digitalis.GUI.RGBPicker.Value"/> will be set to the current
+            value of <b>TransparencyMode</b>.
+            </para>
+            <para>
+            Raises the <see cref="E:Digitalis.GUI.RGBPicker.TransparencyModeChanged"/> event when its value changes.
+            </para>
+            <para>
+            Default value is <see cref="F:Digitalis.GUI.RGBPicker.TransparencyVariable"/>.
+            </para>
+            </remarks>
+        </member>
+        <member name="E:Digitalis.GUI.RGBPicker.TransparencyModeChanged">
+            <summary>
+            Occurs when the value of <see cref="P:Digitalis.GUI.RGBPicker.TransparencyMode"/> changes.
+            </summary>
+        </member>
+        <member name="T:Digitalis.GUI.Controls.ClipboardMonitor">
+            <summary>
+            Provides an interface to the User32.dll clipboard-watching function.
+            </summary>
+            <remarks>
+            This is implemented as a <see cref="T:System.Windows.Forms.Control">Control</see> in order to receive clipboard messages,
+            but it does not need to be added to your <see cref="T:System.Windows.Forms.Form">Form</see>.
+            <para>
+            To use, create an instance and subscribe to the <see cref="E:Digitalis.GUI.Controls.ClipboardMonitor.ClipboardChanged"/> event. The <see cref="T:System.Windows.Forms.Clipboard">Clipboard</see>
+            class is used to retrieve the clipboard data.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ClipboardMonitor.#ctor">
+            <summary>
+            Initializes an instance of the <see cref="T:Digitalis.GUI.Controls.ClipboardMonitor"/> class.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ClipboardMonitor.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Controls.ClipboardMonitor.WndProc(System.Windows.Forms.Message@)">
+            <inheritdoc />
+        </member>
+        <member name="E:Digitalis.GUI.Controls.ClipboardMonitor.ClipboardChanged">
+            <summary>
+            Occurs when the contents of the clipboard change.
+            </summary>
+        </member>
+        <member name="T:Digitalis.GUI.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.Abort">
+            <summary>
+              Looks up a localized string similar to &amp;Abort.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.Cancel">
+            <summary>
+              Looks up a localized string similar to &amp;Cancel.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.Close">
+            <summary>
+              Looks up a localized string similar to &amp;Close.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.Continue">
+            <summary>
+              Looks up a localized string similar to &amp;Continue.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.DontSave">
+            <summary>
+              Looks up a localized string similar to &amp;Don&apos;t Save.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.Exit">
+            <summary>
+              Looks up a localized string similar to E&amp;xit.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.Ignore">
+            <summary>
+              Looks up a localized string similar to &amp;Ignore.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.No">
+            <summary>
+              Looks up a localized string similar to &amp;No.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.OK">
+            <summary>
+              Looks up a localized string similar to &amp;OK.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.Retry">
+            <summary>
+              Looks up a localized string similar to R&amp;etry.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.Save">
+            <summary>
+              Looks up a localized string similar to &amp;Save.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Properties.Resources.Yes">
+            <summary>
+              Looks up a localized string similar to &amp;Yes.
+            </summary>
+        </member>
+        <member name="F:Digitalis.GUI.Forms.ConfirmationDialogForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialogForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ConfirmationDialogForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Digitalis.GUI.Forms.ProgressDialog">
+            <summary>
+            Displays a dialog box which indicates the progress of a long-running operation.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ProgressDialog.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Digitalis.GUI.Forms.ProgressDialog"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ProgressDialog.ReportProgress(System.Int32,System.String,System.String)">
+            <summary>
+            Updates the state of the <see cref="T:Digitalis.GUI.Forms.ProgressDialog"/>.
+            </summary>
+            <param name="progressPercentage">The amount of the operation that has been completed, or -1 for no change.</param>
+            <param name="heading">The heading text, or <b>null</b> for no change.</param>
+            <param name="details">The details text, or <b>null</b> for no change.</param>
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ProgressDialog.Reset">
+            <inheritdoc />
+        </member>
+        <member name="M:Digitalis.GUI.Forms.ProgressDialog.RunDialog(System.IntPtr)">
+            <inheritdoc />
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ProgressDialog.Title">
+            <summary>
+            Gets or sets the title of the <see cref="T:Digitalis.GUI.Forms.ProgressDialog"/>.
+            </summary>
+            <remarks>
+            This cannot be accessed from <see cref="M:Digitalis.GUI.Forms.ProgressDialog.ReportProgress(System.Int32,System.String,System.String)"/>.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ProgressDialog.Callback">
+            <summary>
+            Gets or sets the <see cref="T:Digitalis.GUI.Forms.ProgressCallbackHandler"/> method which will perform the operation.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ProgressDialog.CallbackData">
+            <summary>
+            Gets or sets optional caller-supplied data for the <see cref="T:Digitalis.GUI.Forms.ProgressDialog"/>.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ProgressDialog.DialogResult">
+            <summary>
+            Gets the result of calling the <see cref="T:Digitalis.GUI.Forms.ProgressDialog"/>.
+            </summary>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ProgressDialog.ShowInTaskbar">
+            <summary>
+            Gets or sets a value indicating whether the <see cref="T:Digitalis.GUI.Forms.ProgressDialog"/> should be shown in the taskbar.
+            </summary>
+            <remarks>
+            Default value is <b>false</b>. This cannot be accessed from <see cref="M:Digitalis.GUI.Forms.ProgressDialog.ReportProgress(System.Int32,System.String,System.String)"/>.
+            </remarks>
+        </member>
+        <member name="P:Digitalis.GUI.Forms.ProgressDialog.Delay">
+            <summary>
+            Gets or sets the delay in milliseconds before the <see cref="T:Digitalis.GUI.Forms.ProgressDialog"/> is shown.
+            </summary>
+            <remarks>
+            If non-zero, the <see cref="T:Digitalis.GUI.Forms.ProgressDialog"/> will only be shown if the operation does not complete within
+            the specified time. Defaults to zero.
+            </remarks>
+        </member>
+        <member name="T:Digitalis.GUI.Forms.ProgressCallbackHandler">
+            <summary>
+            Represents a method which is invoked to perform the background operation.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <returns><b>true</b> to continue the operation; <b>false</b> to cancel it.</returns>
+            <remarks>
+            The delegate is invoked from a <see cref="T:System.ComponentModel.BackgroundWorker"/> and should periodically report its progress
+            by calling <see cref="M:Digitalis.GUI.Forms.ProgressDialog.ReportProgress(System.Int32,System.String,System.String)">ReportProgress</see>.
+            <p>The delegate may choose to cancel the operation at any time by returning <b>false</b>.</p>
+            </remarks>
+        </member>
+    </members>
+</doc>

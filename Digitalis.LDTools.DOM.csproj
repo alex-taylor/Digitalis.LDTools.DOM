@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A943ABD7-A7CF-44AA-B9E9-7F81C848CD48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Digitalis.LDTools.DOM</RootNamespace>
+    <AssemblyName>Digitalis.LDTools.DOM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Digitalis.LDTools.DOM.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Digitalis.LDTools.DOM.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3rdParty\opentk\Binaries\OpenTK\Release\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\Analytics.cs" />
+    <Compile Include="API\Delegates.cs" />
+    <Compile Include="API\Enums.cs" />
+    <Compile Include="API\Events.cs" />
+    <Compile Include="API\Exceptions.cs" />
+    <Compile Include="API\IBFCFlag.cs" />
+    <Compile Include="API\IClear.cs" />
+    <Compile Include="API\IColour.cs" />
+    <Compile Include="API\IComment.cs" />
+    <Compile Include="API\ICompositeElement.cs" />
+    <Compile Include="API\IDocument.cs" />
+    <Compile Include="API\IDocumentElement.cs" />
+    <Compile Include="API\IDOMObject.cs" />
+    <Compile Include="API\IDOMObjectCollection.cs" />
+    <Compile Include="API\IElement.cs" />
+    <Compile Include="API\IElementCollection.cs" />
+    <Compile Include="API\IElementEditor.cs" />
+    <Compile Include="API\IGeometric.cs" />
+    <Compile Include="API\IGraphic.cs" />
+    <Compile Include="API\IGroup.cs" />
+    <Compile Include="API\IGroupable.cs" />
+    <Compile Include="API\ILine.cs" />
+    <Compile Include="API\IMaterial.cs" />
+    <Compile Include="API\IMetaCommand.cs" />
+    <Compile Include="API\ITexmapGeometry.cs" />
+    <Compile Include="API\IOptionalLine.cs" />
+    <Compile Include="API\IPage.cs" />
+    <Compile Include="API\IPageElement.cs" />
+    <Compile Include="API\IPause.cs" />
+    <Compile Include="API\IQuadrilateral.cs" />
+    <Compile Include="API\IReference.cs" />
+    <Compile Include="API\ISave.cs" />
+    <Compile Include="API\IStep.cs" />
+    <Compile Include="API\ITexmap.cs" />
+    <Compile Include="API\ITriangle.cs" />
+    <Compile Include="API\IWrite.cs" />
+    <Compile Include="Box3d.cs" />
+    <Compile Include="CanInsertHelper.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="CompositeElement.cs" />
+    <Compile Include="Delegates.cs" />
+    <Compile Include="DocumentElement.cs" />
+    <Compile Include="Element.cs" />
+    <Compile Include="ElementCollection.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Graphic.cs" />
+    <Compile Include="Groupable.cs" />
+    <Compile Include="IntHelper.cs" />
+    <Compile Include="LDHistory.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="IndexCard.cs" />
+    <Compile Include="LDBFCFlag.cs" />
+    <Compile Include="LDClear.cs" />
+    <Compile Include="LDColour.cs" />
+    <Compile Include="LDComment.cs" />
+    <Compile Include="LDDocument.cs" />
+    <Compile Include="DOMObject.cs" />
+    <Compile Include="LDPage.ElementsAccessor.cs" />
+    <Compile Include="LDTexmap.cs" />
+    <Compile Include="LDTexmap.GeometryCollection.cs" />
+    <Compile Include="LDTranslationCatalog.cs" />
+    <Compile Include="LibraryManager.cs" />
+    <Compile Include="LDLine.cs" />
+    <Compile Include="LDOptionalLine.cs" />
+    <Compile Include="LDPage.cs" />
+    <Compile Include="MetaCommand.cs" />
+    <Compile Include="Materials.cs" />
+    <Compile Include="PageElement.cs" />
+    <Compile Include="Palette.cs" />
+    <Compile Include="LDPause.cs" />
+    <Compile Include="LDQuadrilateral.cs" />
+    <Compile Include="LDReference.cs" />
+    <Compile Include="LDSave.cs" />
+    <Compile Include="LDStep.cs" />
+    <Compile Include="LDTriangle.cs" />
+    <Compile Include="LDUpdate.cs" />
+    <Compile Include="LDWrite.cs" />
+    <Compile Include="Matrix3d.cs" />
+    <Compile Include="MLCadGroup.cs" />
+    <Compile Include="MLCadRotationConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="API\Attributes.cs" />
+    <Compile Include="TargetWatcher.cs" />
+    <Compile Include="Vector3dHelper.cs" />
+    <Compile Include="WindingModeHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Digitalis.LDTools.DOM.licenseheader" />
+    <None Include="Test Data\Test.LDrawDocument.CircularReferences.mpd" />
+    <None Include="Test Data\Test.LDrawDocument.ExternalCircularReferencesA.ldr" />
+    <None Include="Test Data\Test.LDrawDocument.ExternalCircularReferencesB.ldr" />
+    <None Include="Test Data\Test.LDrawDocument.ExternalCircularReferencesC.ldr" />
+    <None Include="Test Data\Test.LDrawQuadrilateral.Errors.ldr" />
+    <None Include="Test Data\Test.LDrawQuadrilateral.Errors.mpd" />
+    <None Include="Test Data\Test.LDrawReference.Claim.ldr" />
+    <None Include="Test Data\Test.LDrawReference.Claim.Target.dat" />
+    <None Include="Test Data\Test.LDrawReference.Claim.Target.External.dat" />
+    <None Include="Test Data\Test.LDReference.Analytics.Primitives.ldr" />
+    <None Include="Test Data\Test.LDReference.MovedTo.dat" />
+    <None Include="Test Data\Test.MLCadGroup.ldr" />
+    <None Include="Test Data\Test.MLCadGroup.Names.ldr" />
+    <None Include="Test Data\Test.RenderEngine.Colours.ldr" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\shortcut.png" />
+    <None Include="icons\shortcutalias.png" />
+    <None Include="icons\shortcutphysical.png" />
+    <Content Include="icons\alias.png" />
+    <Content Include="icons\bfc.png" />
+    <Content Include="icons\clear.png" />
+    <Content Include="icons\colour.png" />
+    <Content Include="icons\comment.png" />
+    <Content Include="icons\geometry.png" />
+    <Content Include="icons\group.png" />
+    <Content Include="icons\line.png" />
+    <Content Include="icons\model.png" />
+    <Content Include="icons\optionalline.png" />
+    <Content Include="icons\part.png" />
+    <Content Include="icons\pause.png" />
+    <Content Include="icons\physical.png" />
+    <Content Include="icons\primitive.png" />
+    <Content Include="icons\print.png" />
+    <Content Include="icons\quadrilateral.png" />
+    <Content Include="icons\save.png" />
+    <Content Include="icons\step.png" />
+    <Content Include="icons\subassembly.png" />
+    <Content Include="icons\subparts.png" />
+    <Content Include="icons\texmap.png" />
+    <Content Include="icons\triangle.png" />
+    <Content Include="icons\write.png" />
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Digitalis.UndoSystem\Digitalis.UndoSystem.csproj">
+      <Project>{9465647C-3C27-435C-945D-DF13D8B868DC}</Project>
+      <Name>Digitalis.UndoSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

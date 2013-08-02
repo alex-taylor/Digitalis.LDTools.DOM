@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB7854A2-076F-4474-98EE-128C4BA5B70C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnitTests</RootNamespace>
+    <AssemblyName>Digitalis.LDTools.DOM.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="OpenTK">
+      <HintPath>..\..\..\3rdParty\opentk\Binaries\OpenTK\Release\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChromeMaterialTest.cs" />
+    <Compile Include="ConfigurationTest.cs" />
+    <Compile Include="DocumentElementTest.cs" />
+    <Compile Include="ElementTest.cs" />
+    <Compile Include="GlitterMaterialTest.cs" />
+    <Compile Include="GraphicTest.cs" />
+    <Compile Include="GroupableTest.cs" />
+    <Compile Include="IBFCFlagTest.cs" />
+    <Compile Include="IClearTest.cs" />
+    <Compile Include="IColourTest.cs" />
+    <Compile Include="ICommentTest.cs" />
+    <Compile Include="IDocumentElementTest.cs" />
+    <Compile Include="IDocumentTest.cs" />
+    <Compile Include="IDOMObjectCollectionTest.cs" />
+    <Compile Include="IDOMObjectTest.cs" />
+    <Compile Include="IElementCollectionTest.cs" />
+    <Compile Include="IElementTest.cs" />
+    <Compile Include="IGeometricTest.cs" />
+    <Compile Include="IGraphicTest.cs" />
+    <Compile Include="IGroupableTest.cs" />
+    <Compile Include="IGroupTest.cs" />
+    <Compile Include="ILineTest.cs" />
+    <Compile Include="IMaterialTest.cs" />
+    <Compile Include="IMetaCommandTest.cs" />
+    <Compile Include="IndexCardTest.cs" />
+    <Compile Include="IOptionalLineTest.cs" />
+    <Compile Include="IPage.ElementsTest.cs" />
+    <Compile Include="IPageElementTest.cs" />
+    <Compile Include="IPageTest.cs" />
+    <Compile Include="IPauseTest.cs" />
+    <Compile Include="IQuadrilateralTest.cs" />
+    <Compile Include="IReferenceTest.cs" />
+    <Compile Include="ISaveTest.cs" />
+    <Compile Include="IStepTest.cs" />
+    <Compile Include="ITexmapGeometryTest.cs" />
+    <Compile Include="ITexmapTest.cs" />
+    <Compile Include="ITriangleTest.cs" />
+    <Compile Include="IWriteTest.cs" />
+    <Compile Include="LDBFCFlagTest.cs" />
+    <Compile Include="LDClearTest.cs" />
+    <Compile Include="LDPage.ElementsTest.cs" />
+    <Compile Include="LDPauseTest.cs" />
+    <Compile Include="LDSaveTest.cs" />
+    <Compile Include="LDStepTest.cs" />
+    <Compile Include="LDTexmapTest.cs" />
+    <Compile Include="LDTranslationCatalogTest.cs" />
+    <Compile Include="LDColourTest.cs" />
+    <Compile Include="ElementCollectionTest.cs" />
+    <Compile Include="LDCommentTest.cs" />
+    <Compile Include="LDDocumentTest.cs" />
+    <Compile Include="DOMObjectTest.cs" />
+    <Compile Include="LDLineTest.cs" />
+    <Compile Include="LDOptionalLineTest.cs" />
+    <Compile Include="LDPageTest.cs" />
+    <Compile Include="LDQuadrilateralTest.cs" />
+    <Compile Include="LDReferenceTest.cs" />
+    <Compile Include="LDTriangleTest.cs" />
+    <Compile Include="LDUpdateTest.cs" />
+    <Compile Include="LDWriteTest.cs" />
+    <Compile Include="LibraryManagerTest.cs" />
+    <Compile Include="MaterialsTest.cs" />
+    <Compile Include="MatteMetallicMaterialTest.cs" />
+    <Compile Include="MetalMaterialTest.cs" />
+    <Compile Include="MLCadGroupTest.cs" />
+    <Compile Include="MLCadRotationConfigTest.cs" />
+    <Compile Include="MockDocumentElement.cs" />
+    <Compile Include="MockDOMObject.cs" />
+    <Compile Include="MockElement.cs" />
+    <Compile Include="MockElementCollection.cs" />
+    <Compile Include="MockGraphic.cs" />
+    <Compile Include="MockGroupable.cs" />
+    <Compile Include="MockPageElement.cs" />
+    <Compile Include="MocksFactory.cs" />
+    <Compile Include="PageElementTest.cs" />
+    <Compile Include="PaletteTest.cs" />
+    <Compile Include="PearlescentMaterialTest.cs" />
+    <Compile Include="PlasticMaterialTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RubberMaterialTest.cs" />
+    <Compile Include="SpeckleMaterialTest.cs" />
+    <Compile Include="TestBase.cs" />
+    <Compile Include="TexmapFallbackGeometryTest.cs" />
+    <Compile Include="TexmapSharedGeometryTest.cs" />
+    <Compile Include="TexmapTextureGeometryTest.cs" />
+    <Compile Include="UnknownMaterialTest.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Vector3dHelperTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Digitalis.UndoSystem\Digitalis.UndoSystem.csproj">
+      <Project>{9465647C-3C27-435C-945D-DF13D8B868DC}</Project>
+      <Name>Digitalis.UndoSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Digitalis.LDTools.DOM.csproj">
+      <Project>{A943ABD7-A7CF-44AA-B9E9-7F81C848CD48}</Project>
+      <Name>Digitalis.LDTools.DOM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\Digitalis.LDTools.DOM.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Digitalis.LDTools.DOM.UnitTests.licenseheader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

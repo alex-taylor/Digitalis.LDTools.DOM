@@ -1,0 +1,40 @@
+0 Test LDrawReference Target Resolution
+0 Name: Test.LDrawReference.Claim.ldr
+0 Unofficial Model
+
+0 Library target (part)
+1 16 200 0 0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 Library target (subpart)
+1 16 0 40 0 1 0 0 0 1 0 0 0 1 s\10s01.dat
+
+0 Library target (primitive)
+1 16 0 -20 150 50 0 0 0 50 0 0 0 50 4-4cylc.dat
+
+0 Library target (hires primitive)
+1 16 0 -20 -150 50 0 0 0 50 0 0 0 50 48\4-4cylc.dat
+
+0 Library target (ldr)
+1 16 -200 0 0 1 0 0 0 1 0 0 0 1 162.ldr
+
+0 Library target (mpd)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 600.mpd
+
+0 External target (relative)
+1 1 100 0 50 1 0 0 0 1 0 0 0 1 Test.LDrawReference.Claim.Target.dat
+
+0 External target (absolute)
+1 2 100 0 -50 1 0 0 0 1 0 0 0 1 E:\Development\Digitalis\Digitalis.LDTools.DOM\Test Data\Test.LDrawReference.Claim.Target.dat
+
+0 External target (absolute with external target of its own)
+1 2 580 -32 -10 1 0 0 0 1 0 0 0 1 E:\Development\Digitalis\Digitalis.LDTools.DOM\Test Data\Test.LDrawReference.Claim.Target.External.dat
+
+0 Library target (x-series => official)
+1 16 410 0 0 1 0 0 0 1 0 0 0 1 x699.dat
+
+0 Library target (~Moved to : should be 121.dat -> 3787.dat)
+1 16 240 -55 -150 1 0 0 0 1 0 0 0 1 121.dat
+
+0 Alias (should be 30071.dat -> 3005.dat)
+1 4 150 -55 -150 1 0 0 0 1 0 0 0 1 30071.dat
+1 16 51 0 0 -1 0 0 0 -1 0 0 0 1 stud3.dat

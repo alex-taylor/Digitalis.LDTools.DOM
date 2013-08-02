@@ -1,0 +1,65 @@
+0 Test.LDReference.Analytics.Primitives
+0 Name: Test.LDReference.Analytics.Primitives.ldr
+0 Author: Alex Taylor
+0 !LDRAW_ORG Unofficial_Model
+0 WRITE BFC CERTIFY CCW
+
+0 // Scaled X/Z only
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 0 -290 0 150 10 0 0 0 1 0 0 0 10 4-4disc.dat
+
+0 // ***Scaled X/Y/Z
+1 1 -260 0 150 10 0 0 0 10 0 0 0 10 4-4disc.dat
+
+0 // Scaled X/Z and inverted Y
+1 2 -230 0 150 10 0 0 0 -1 0 0 0 10 4-4disc.dat
+
+0 // ***Scaled X/Y/Z and inverted Y
+1 3 -200 0 150 10 0 0 0 -10 0 0 0 10 4-4disc.dat
+
+0 // Scaled X/Z then rotated around Z-axis
+1 5 -140 0 150 7.07107 0.707109 0 -7.07107 0.707109 0 0 0 10 4-4disc.dat
+
+0 // Scaled X/Z then rotated around X/Y/Z axes
+1 6 -110 0 150 6.10325 -0.37731 -6.96518 7.88174 0.37725 4.86276 0.79283 -0.84576 5.27634 4-4disc.dat
+
+0 // ***Scaled X/Y/Z then rotated around X-axis
+1 7 -80 0 150 10 0 0 0 8.38671 -5.44639 0 5.44639 8.38671 4-4disc.dat
+
+0 // ***Scaled X/Y/Z then rotated around Z-axis
+1 8 -50 0 150 7.07107 7.07107 0 -6.53281 6.53281 -3.82683 -2.70598 2.70598 9.2388 4-4disc.dat
+
+0 // ***Scaled X/Y/Z then rotated around X/Y/Z axes
+1 9 -20 0 150 7.86712 4.18302 4.5399 -6.13342 4.46291 6.51641 0.69971 -7.91105 6.07665 4-4disc.dat
+
+0 // Scaled X/Z then rotated around X-axis
+1 4 -170 0 150 10 0 0 0 0.85717 -5.15038 0 0.51504 8.57167 4-4disc.dat
+
+0 // Rotated around X-axis
+1 10 -290 0 120 1 0 0 0 -0.01745 -0.99985 0 0.99985 -0.01745 4-4disc.dat
+
+0 // Rotated around Z-axis
+1 11 -260 0 120 0.84805 0 -0.52992 -0.52992 0 -0.84805 0 1 0 4-4disc.dat
+
+0 // ***Rotated around the X-axis then scaled X/Z: as the scale is axis-aligned rather than aligned to the rotated disc, it introduces an unwanted Y-scale component
+1 12 -230.32 0.321 120 10 0 0 0 0.96593 -0.25882 0 2.58819 9.65926 4-4disc.dat
+
+0 // ***Rotated around the X-axis then scaled X/Y/Z
+1 13 -200.32 0.321 120 10 0 0 0 9.65926 -2.58819 0 2.58819 9.65926 4-4disc.dat
+
+0 // ***Rotated, scaled X/Y/Z, rotated
+1 27 -170.32 0.321 90 7.07107 -7.07107 0 5 5 -7.07107 5 5 10 4-4disc.dat
+
+0 // ***Rotated, scaled X/Y/Z, rotated
+1 17 -170.32 0.321 60 7.07107 -0.68302 1.83013 7.07107 0.68302 -1.83013 0 2.58819 9.65926 4-4disc.dat
+
+0 // ***Rotated, scaled X/Z, rotated: as the scale is axis-aligned rather than aligned to the rotated disc, it introduces an unwanted Y-scale component
+1 14 -170.32 0.321 120 7.07107 -7.07107 0 0.5 0.5 -7.07107 0.5 0.5 10 4-4disc.dat
+
+0 // ***Scale X/Z 5/10, rotate 10 around X-axis, scale X/Z 10/10: as the second scale is axis-aligned rather than aligned to the rotated disc, it introduces an unwanted Y-scale component
+1 16 -110 0 120 50 0 0 0 0.984808 -1.73648 0 1.73648 98.4808 4-4disc.dat
+
+0 //
+1 17 -110 0 120 10 0 0 0 1 10 0 0 10 4-4disc.dat
+0

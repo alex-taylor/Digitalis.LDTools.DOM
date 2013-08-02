@@ -1,0 +1,11 @@
+0 Test MLCadGroup Handling
+0 Name: Test.MLCadGroup.ldr
+0 Unofficial Model
+
+0 MLCAD BTG Group name
+1 16 -220 -16 0 1 0 0 0 1 0 0 0 1 3005.dat
+0 MLCAD BTG Group name
+1 16 -160 -16 50 1 0 0 0 1 0 0 0 1 4588.dat
+0 MLCAD BTG Group name
+1 16 -100 -16 -40 1 0 0 0 1 0 0 0 1 3062b.dat
+0 GROUP 3 Group name

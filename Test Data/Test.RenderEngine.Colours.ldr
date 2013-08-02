@@ -1,0 +1,53 @@
+0 Test RenderEngine Colours
+0 Name: Test.RenderEngine.Colours.ldr
+0 !LDRAW_ORG Unofficial_Model
+
+0 // References
+0 // Main Colour
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // System-palette Opaque Colour
+1 1 20 0 0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // System-palette Transparent Colour
+1 33 40 0 0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // Direct Opaque Colour (0x format: 0x2FF0000)
+1 0x2FF0000 60 0 0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // Direct Opaque Colour (# format: #200FF00)
+1 #200FF00 60 0 20 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // Direct Opaque Colour (base-10 format: 33554687)
+1 33554687 60 0 40 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // Direct Transparent Colour
+1 #3FF00FF 80 0 0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // Direct Dithered Opaque Colour
+1 #4F0F000 100 0 0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // Direct Dithered Transparent Colour
+1 #5FF0000 120 0 0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // Quads
+0 // Main Colour
+4 16 -10 24 -40 10 24 -40 10 24 -20 -10 24 -20
+
+0 // System-palette Opaque Colour
+4 1 10 24 -40 30 24 -40 30 24 -20 10 24 -20
+
+0 // System-palette Transparent Colour
+4 33 30 24 -40 50 24 -40 50 24 -20 30 24 -20
+
+0 // Direct Opaque Colour
+4 #2FF0000 50 24 -40 70 24 -40 70 24 -20 50 24 -20
+
+0 // Direct Transparent Colour
+4 #3FF00FF 70 24 -40 90 24 -40 90 24 -20 70 24 -20
+
+0 // Direct Dithered Opaque Colour
+4 #4F0F000 90 24 -40 110 24 -40 110 24 -20 90 24 -20
+
+0 // Direct Dithered Transparent Colour
+4 #5FF0000 110 24 -40 130 24 -40 130 24 -20 110 24 -20

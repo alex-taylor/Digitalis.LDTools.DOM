@@ -1,0 +1,14 @@
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\bin\Debug\Digitalis.LDTools.DOM.UnitTests.dll
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\bin\Debug\Digitalis.LDTools.DOM.UnitTests.pdb
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\bin\Debug\Digitalis.LDTools.DOM.dll
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\bin\Debug\Digitalis.UndoSystem.dll
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\bin\Debug\OpenTK.dll
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\bin\Debug\Digitalis.UndoSystem.pdb
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\bin\Debug\Digitalis.LDTools.DOM.pdb
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\bin\Debug\Digitalis.LDTools.DOM.xml
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\bin\Debug\OpenTK.xml
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\bin\Debug\Digitalis.LDTools.DOM_Accessor.dll
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\bin\Debug\Digitalis.LDTools.DOM_Accessor.pdb
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\obj\Debug\ResolveAssemblyReference.cache
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\obj\Debug\Digitalis.LDTools.DOM.UnitTests.dll
+E:\Development\Digitalis\Digitalis.LDTools.DOM\UnitTests\obj\Debug\Digitalis.LDTools.DOM.UnitTests.pdb

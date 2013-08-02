@@ -1,0 +1,403 @@
+
+Analytics
+---------
+- analytics-provider:
+    - interface which specifies:
+        - what type(s) of element it supports, specified by type-name as a string
+        - HasProblems(LDElement), Analyse(LDElement)
+        - Dispose(LDElement) - called when the element is junked so that the provider can release any cached validation data
+    - loaded as plugins in the usual way
+    - on load, convert the type-name to a Type and add an instance of the class to a Dictionary on LDElement (multiple IAnalyticsProvider classes may be available for each type)
+    - in LDElement.Analyse and HasProblems, do a lookup on the Dictionary for the element's Type and call the relevant method on each provider listed
+    - major problem: the editors won't recognise these IProblemDescriptors, so will be unable to tie them up to their controls
+        - possible solution: add another Guid to the descriptor which identifies the field it relates to
+            - what if it relates to multiple fields?
+    - (long-term): add an 'aggregator' API to IDocument/IPage/IElementCollection?
+
+        /// <summary>
+        /// Gets a value indicating whether any descendant of the <see cref="IDOMObjectCollection{T}"/> has detected problems with any of its values.
+        /// </summary>
+        /// <param name="mode">The mode to run the checks in. See <see cref="IDOMObject.Analyse"/> for details.</param>
+        /// <returns>A value indicating whether problems were detected.</returns>
+        /// <remarks>
+        /// <para>
+        /// Details of any problems detected may be obtained by calling <see cref="AnalyseElements"/>. The check is recursive: if the <see cref="IDOMObjectCollection{T}"/> contains
+        /// other <see cref="IDOMObjectCollection{T}"/>s, their <see cref="IDOMObject"/>s will be checked, and so on. Note that the <see cref="IDOMObject"/>s of
+        /// <see cref="IsReadOnly">read-only</see> <see cref="IDOMObjectCollection{T}"/>s are not checked, since they cannot be modified directly.
+        /// </para>
+        /// </remarks>
+        public bool ContainsProblemElements(Format mode)
+        {
+            // TODO: new parameter to specify whether r/o elements should be checked, plus the check itself; update documentation
+            foreach (IDOMObject e in this)
+            {
+                if (e.HasProblems(mode))
+                    return true;
+
+                IDOMObjectCollection<T> collection = e as IDOMObjectCollection<T>;
+
+                if (null != collection && collection.ContainsProblemElements(mode))
+                    return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Checks the descendants of the <see cref="IDOMObjectCollection{T}"/> for problems.
+        /// </summary>
+        /// <param name="mode">The mode to run the checks in. See <see cref="IDOMObject.Analyse"/> for details.</param>
+        /// <returns>A collection of <see cref="IProblemDescriptor"/>s describing any problems detected with the <see cref="IDOMObject"/>s.</returns>
+        /// <remarks>
+        /// <para>
+        /// The check is recursive: if the <see cref="IDOMObjectCollection{T}"/> contains other <see cref="IDOMObjectCollection{T}"/>s, their <see cref="IDOMObject"/>s
+        /// will be checked, and so on. Note that the <see cref="IDOMObject"/>s of <see cref="IsReadOnly">read-only</see> <see cref="IDOMObjectCollection{T}"/>s are not
+        /// checked, since they cannot be modified directly.
+        /// </para>
+        /// </remarks>
+        public ICollection<IProblemDescriptor> AnalyseElements(Format mode)
+        {
+            // TODO: new parameter to specify whether r/o elements should be checked, plus the check itself; update documentation
+            IEnumerable<IProblemDescriptor> childProblems      = from element in this where element.HasProblems(mode) from problem in element.Analyse(mode) select problem;
+            IEnumerable<IProblemDescriptor> grandchildProblems = from element in this
+                                                                 where (element is IDOMObjectCollection<T>) && (element as IDOMObjectCollection<T>).ContainsProblemElements(mode)
+                                                                 from problem in (element as IDOMObjectCollection<T>).AnalyseElements(mode)
+                                                                 select problem;
+
+            return new List<IProblemDescriptor>(childProblems.Concat(grandchildProblems));
+        }
+
+
+
+Operations
+----------
+ - goes on IDOMObject
+ - based on IFixDescriptor, context-sensitive collection of functions provided by an element
+ - probably mostly of use to CompositeElements - for example, to add/remove control-handles on something like a bezier-curve or LSynth-alike construct
+    - also useful to other stuff, though: eg LDReference could provide an op to toggle the 'Invert' flag; LDTexmap could have ops to pick images, change projection-mode, etc
+ - could be added to the context-menu in the editor
+ - needs to be extensible
+
+
+
+ControlHandles (or ControlPoints?)
+--------------
+ - goes on IGraphic
+ - Vertices are rendering points which define the ends of a line or the corners of a triangle/quad
+ - Coordinates are a super-set of Vertices in that they also include non-rendering points such as the control-points of a condline; thus, all Vertices are Coordinates
+ - ControlPoints is a set which may intersect both Vertices and Coordinates?
+ - a ControlPoint is defined by two Vector3d: one is the Anchor and never changes, the other is the current location relative to the Anchor
+ - it has zero or more Constraints
+    - a Constraint is a straight line which passes through the point; the point may optionally translate along it or rotate around it
+    - the line is defined relative to the Origin of the graphic
+    - the Constraint specifies the current value, and optionally the min/max values that may be set
+        - these are then used to calculate the point
+        - for a translation, values are distances from the Anchor to the point
+        - for a rotation the values are angles
+    - if there are no Constraints then the point is 'floating' and may be transformed arbitrarily
+ - might be useful if points could have names (for display in the UI - see LDTexmapEditor)
+
+
+
+Rotation-points / Connections
+-----------------------------
+ - data is accessed from the page to which it applies (and made available via refs to it)
+    - it might be sensible to store the data for a particular TargetKey in a global cache; this would ensure that we don't wind up with multiple copies
+      if a document is loaded multiple times, and also that edits made to an instance are propagated
+ - data comes from up to three sources: built-in (used for most primitives - may possibly be done via an external definition file for ease of editing);
+   retrieved from the refs in the page; and loaded from an optional external 'Conns' file, in SRBuilder format
+ - to build the data-set for a page, iterate over its refs and do target-lookup.  For each target retrieve its data and add to our set.  Finally, load
+   our own Conns file and process that.
+ - the APIs should allow this data to be manipulated by an editing application - create, delete, modify - and to be persisted back out to Conns file(s)
+   as required; this means that it must be possible to differentiate between data which belongs to the page (ie, the Conns file) and data inherited from
+   its refs (which is therefore not editable)
+    - pages will thus need to keep the inherited data uptodate when their contents change
+ - for convenience there should only be a single list of data returned from the page, so each entry will need flagging as 'editable' or 'not'; auto-generated
+   entries are 'not', of course
+ - properties of each entry seem to be a Type (from a pre-defined list), a location (Vector3d) and an orientation (also Vector3d, not sure if it's relative
+   to the first or absolute)
+ - not all pages will have data: either because they don't need it (primitives, subparts, models) or because they simply don't have any yet (parts, although
+   this is less likely as most parts at least have studs)
+    - this means that it must be possible for a page to determine that it doesn't have data without needing to try and re-analyse each time the data is requested
+
+The meta-data needed to determine whether two parts are 'connected', and by what means, is an application problem since this obviously cannot be stored in the LDraw file.
+Connection-types seem to be 'fixed' (eg two bricks clipped together) and 'connected' (two parts attached but with freedom of movement, eg an axle through a Technic beam).
+Much bigger problem than we need to get into for now, though!
+
+Display and editing of connections for parts might be worth considering, though.  Still prefer to see if an official standard will be introduced.
+
+
+
+CompositeElements
+-----------------
+ - CompositeElements seem to consist of Constraint and Generated elements.  The former is optional, but when present needs to be user-editable.  The latter should
+   not be accessible in editors.  This could be done by making CompositeElement function similarly to Texmap: it is read-only (seal the property to stop the subclass
+   overriding this) and contains two ElementCollection objects, both also available via public getters for convenience.
+ - Constraint collection: freely modifiable by the user, as are its contents.  Optional.  API on RenderEngine to specify whether it should be rendered...or should
+   this be a property on CE...or the Visible property on the collection itself?  Might be more useful to turn the render on/off on a per-element basis.
+ - Generated collection: read-only to the user, but freely-modifiable by the CompositeElement subclass.  Might have to be provided by the subclass for this to work.
+   Property to specify whether it should be rendered?  Might be sensible to not show this if the user is editing the constraints.
+ - might be worth having a 'Matrix' property so that something like a Minifig can use it; if so it will also need an 'enabled' property since most classes won't use it
+    - this is basically a sop so that ElementsEditor can display it...
+ - Attributes:
+    - start-marker
+    - optional end-marker (if omitted, the end-point is the end-skip-marker if specified; or the start-marker otherwise): anything between start-end which doesn't
+      fit into the skip section must go to the CompositeElement, which will be reponsible for dealing with its own Constraints
+    - optional start+end skip-markers: anything between these two will be discarded by the parser
+        - should support multiple skip-sections if possible
+        - these blocks represent the Generated elements
+ - generated/non-generated can appear in any order and may be mixed; context may be important, which is a problem if we want to pre-parse all this
+    - best option may well be to turn the entire section into elements, with meta-lines becoming LDComments, and let the CompositeElement deal with it like that
+    - the CompositeElement will then sort out what is a Constraint and what is not
+
+
+
+Themes
+------
+ - maintain a user-supplied list of theme names in Properties/Configuration; this can be used to provide suggestions when using the PageEditor
+ - if an official list is sanctioned, it should be maintained separately as a text-file (so that updates to it don't destroy the user's names)
+    - entries found in both lists would be removed from the user-list
+ - a suitable API will be needed, along with a 'picker' control
+ - LDPage.Theme might need to become something more complex than a string, since theme names are hierarchical
+ - Analytics can check the user's theme name against the known names (official+user) and post a warning if not found; the Fix would be to add it to the user's list
+
+
+Decorators
+----------
+ - write 'read-only decorator' classes for each, which implement the interfaces to throw an exception if modifications are attempted, and just call the underlying object otherwise
+ - this should allow us to prevent auto-generated members of CompositeElements from being modified by callers while still preserving the ability for the Composite to mod its components
+
+
+Specific
+--------
+
+Parsing - specifically validation - has become very slow.  See 8448.mpd for an example.  Seems to be CanInsert() that's killing us.  Also slows down opening the RefEditor on large models.
+
+Store a ConstructorInfo to speed up creating the editors
+
+
+
+
+- Configuration
+TODO:
+    - add the plugins folder to the catalog
+    - add support for detecting CompositeElements
+    - verify that classes support serialization
+    - if file-extension checking is to be kept, it should be moved out to here as a service
+
+- LDDocument:
+TODO:
+    - 'Status' needs to connect to the Parts Tracker and check the votes
+
+CONSIDER:
+    - either remove the file-extension checker in the parser, or expand it to include .l3b
+
+- LDGraphic
+TODO:
+    - ControlHandles
+    - Analytics: duplicate-detection (requires support from LDPage)
+
+- LDLine
+TODO:
+    - Analytics: overlapping lines
+
+- LDOptionalLine
+TODO:
+    - Analytics: Fix needed for colocated control-points
+    - Analytics: overlapping lines
+
+- LDPage
+BUGS:
+    - parser: after eliminating trailing empty-comments, if the final step is a regular STEP and is now empty, delete it as well (unless it's also the only LDStep)
+        - see Test.LDStep.ldr
+
+TODO:
+    - add support for CompositeElements
+    - add support for OMR naming conventions?
+        - http://www.ldraw.org/article/593.html
+        - GetFullName() needs updating to support this, and the use of TargetName on saving will need reworking
+        - ongoing discussion: http://forums.ldraw.org/read.php?19,6047
+        - Analytics: in OMR mode, detect names/titles that don't conform to the standard
+            - in PT mode, determine whether the name *should* conform
+        - GenerateCode(): in PT mode for a page going to an OMR file, strip the OMR prefix off the 'Name:' line
+    - Analytics: add duplicate-detection code to support LDGraphic
+    - new gettable Property to retrieve a collection of rotation-points
+        - auto-generated from the page's primitives: studs, clips, hinges, pins, etc
+        - also includes any MLCad custom points
+        - CONSIDER: should RotationConfig/RotationPoint be renamed?
+
+CONSIDER:
+    - the type-analyser should eventually recognise .l3b as equivalent to .ldr?
+        - if this does happen then there are various other places in the system (eg TargetPicker) which check for valid LDraw extensions, and these must also be updated
+    - Analytics: a page which contains no bfcflag/ref/tri/quad/collections doesn't really require BFC setting?
+    - the Fix for a non-CCW primitive could also call ReverseWinding()
+        - possible drawback: the page's contents might in fact be correct and it's just the flag which is wrong
+        - might be better done as a second Fix so the user has the choice
+
+- LDQuadrilateral
+TODO:
+    - Analytics: inter-element Fixes needed for concave, colinear/colocation causing a triangle, warp
+    - Analytics: overlapping quads/triangles
+
+- LDReference
+BUGS:
+    - setting a local-palette colour doesn't work: Analytics reports a missing colour
+        - also affects the Editor: the preview is Main_Colour
+        - this might affect all other graphic types as well
+
+TODO:
+    - Analytics: refs to an Alias may not in fact be disallowed
+        - http://forums.ldraw.org/read.php?19,6630
+    - Analytics: see if it's practical to check the descendants of Targets for illegal scaling/mirroring
+        - eg a Subpart which contains studs should not be scaled or mirrored
+    - once added to LDPage, the gettable 'rotation points' property
+        - should it return relative or absolute points?
+    - once available, a new Analytic to report when a part (in a model, OMR mode only) is being used in a colour that it doesn't come in
+        - Error status
+
+- LDTexmap
+TODO:
+    - may need to constrain/conform the coords
+    - file-change and resolve-change detection for Texture and Glossmap
+        - should use much the same mechanism as LDReference
+            - should in fact be possible to come up with a unified target-watcher module which texmap and ref can share
+
+CONSIDER:
+    - if practical, the preview could be oriented so that the texture being edited is to the front; particularly useful when editing something like a minifig head with patterns on both sides
+        - at the very least we'll need to zero out any transforms in the geometry...
+
+- LDTriangle
+TODO:
+    - Analytics: overlapping quads/triangles
+
+- LibraryManager / IndexCard
+TODO:
+    - add texture-images to the cache.  Might be useful to have events coming off when they are added/removed/etc.
+
+CONSIDER:
+    - either remove the file-extension checker in the parser, or expand it to include .l3b (in the Models folder only)
+    - probably not practical, but it would certainly be nice to have an event when a file is affected by a change to one of its dependencies
+
+- TargetWatcher
+TODO:
+    - recreate a watcher if it reports an error and dies
+
+
+
+
+
+
+
+
+
+
+
+Removed from LDPage:
+
+        /// <summary>
+        /// Gets the line-number of the LDraw code that will be generated for a specified <see cref="T:Digitalis.LDTools.DOM.API.IElement"/> in the <see cref="LDPage"/>.
+        /// </summary>
+        /// <param name="element">The element to check for.</param>
+        /// <returns>The line-number of the LDraw code for <paramref name="element"/></returns>
+        /// <exception cref="T:System.ArgumentException"><paramref name="element"/> is not a member of the <see cref="LDPage"/></exception>
+        /// <remarks>
+        /// <para>
+        /// The returned value is the 1-based index into the code-lines that will be generated by
+        /// <see cref="IDOMObject.ToCode(StringBuilder, Format, uint, ref Matrix4d, WindingDirection)"/> in <see cref="Digitalis.LDTools.DOM.API.CodeStandards.Full"/> mode.
+        /// If <paramref name="element"/> generates multiple lines of code, the number of the first line is returned.
+        /// </para>
+        /// </remarks>
+        public uint IndexOfCode(IElement element)
+        {
+            if (null == element.Step || !Contains(element.Step))
+                throw new ArgumentException();
+
+            uint activeLines;
+            uint blankLines;
+
+            GetHeaderCodeLines(out activeLines, out blankLines);
+
+            uint idx = activeLines + blankLines + 1;
+
+            foreach (LDStep step in this)
+            {
+                if (element.Step != step)
+                {
+                    idx += step.TotalCodeLinesCount;
+                }
+                else
+                {
+                    foreach (IDOMObject el in step.TakeWhile(n => n != element))
+                    {
+                        idx += el.TotalCodeLinesCount;
+                    }
+
+                    break;
+                }
+            }
+
+            return idx;
+        }
+
+        [TestMethod]
+        public void IndexOfCodeTest()
+        {
+            LDPage page = new LDPage();
+            uint idx;
+
+            try
+            {
+                idx = page.IndexOfCode(null);
+                Assert.Fail();
+            }
+            catch (NullReferenceException)
+            {
+            }
+
+            try
+            {
+                idx = page.IndexOfCode(new LDComment());
+                Assert.Fail();
+            }
+            catch (ArgumentException)
+            {
+            }
+
+            LDComment comment = new LDComment();
+            LDStep step = new LDStep();
+            page.Add(step);
+            step.Add(comment);
+            Assert.AreEqual(9U, page.IndexOfCode(comment));
+
+            LDReference r = new LDReference();
+            step.Add(r);
+            Assert.AreEqual(10U, page.IndexOfCode(r));
+
+            LDLine line = new LDLine();
+            step.Add(line);
+            Assert.AreEqual(11U, page.IndexOfCode(line));
+
+            // add a line to the LDReference's code
+            r.Invert = true;
+            Assert.AreEqual(12U, page.IndexOfCode(line));
+
+            // group everything
+            MLCadGroup group = new MLCadGroup();
+            step.Add(group);
+            Assert.AreEqual(13U, page.IndexOfCode(group));
+            comment.Group = group;
+            Assert.AreEqual(9U, page.IndexOfCode(comment));
+            Assert.AreEqual(11U, page.IndexOfCode(r));
+            Assert.AreEqual(13U, page.IndexOfCode(line));
+            Assert.AreEqual(14U, page.IndexOfCode(group));
+            line.Group = group;
+            Assert.AreEqual(9U, page.IndexOfCode(comment));
+            Assert.AreEqual(11U, page.IndexOfCode(r));
+            Assert.AreEqual(13U, page.IndexOfCode(line));
+            Assert.AreEqual(15U, page.IndexOfCode(group));
+            r.Group = group;
+            Assert.AreEqual(9U, page.IndexOfCode(comment));
+            Assert.AreEqual(11U, page.IndexOfCode(r));
+            Assert.AreEqual(15U, page.IndexOfCode(line));
+            Assert.AreEqual(17U, page.IndexOfCode(group));
+        }

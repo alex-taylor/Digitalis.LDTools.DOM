@@ -1,0 +1,12 @@
+0 Untitled
+0 Name: Test.LDStep.ldr
+0 Author: Alex Taylor
+0 Unofficial Model
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 ROTSTEP 10 20 30 ABS
+0 ROTSTEP 40 50 60 ADD
+0 ROTSTEP 70 80 90 REL
+0 ROTSTEP END
+0 STEP
+0

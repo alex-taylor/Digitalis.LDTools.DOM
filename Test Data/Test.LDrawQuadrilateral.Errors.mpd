@@ -1,0 +1,68 @@
+0 FILE Test.LDrawQuadrilateral.Errors.ldr
+0 Test LDrawQuadrilateral Error Detection
+0 Name: Test.LDrawQuadrilateral.Errors.ldr
+0 Unofficial Model
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 BFC CERTIFY CCW
+
+0 // Concave Quad (starts at tip, wound correctly)
+4 1 0 0 0 15 0 16 0 0 10 -15 0 17
+
+0 // Concave Quad (starts at wing, wound correctly)
+4 6 55 0 16 40 0 10 25 0 17 40 0 0
+
+0 MLCAD BTG Group
+0 // Bowtie Quad (FirstTwo)
+0 MLCAD BTG Group
+4 2 19 0 -16 19 0 -2 -13 0 -16 -13 0 -2
+
+0 MLCAD BTG Group
+0 // Bowtie Quad (MiddleTwo)
+0 MLCAD BTG Group
+4 7 59 0 -2 27 0 -16 59 0 -16 27 0 -2
+
+0 // Colinear Quad
+0 MLCAD BTG Group name3
+4 3 78 0 -1 95 0 16 78 0 16 63 0 16
+
+0 MLCAD BTG Group
+0 // Warped Quad
+0 MLCAD BTG Group
+4 4 94 -10 -21 94 0 -4 62 0 -4 62 0 -21
+0 GROUP 6 Group
+0 MLCAD BTG Group name3
+1 16 0 0 -30 1 0 0 0 1 0 0 0 1 Page 2.ldr
+0 GROUP 2 Group name3
+0
+0 FILE Page 2.ldr
+0 New Model
+0 Name: Page 2.ldr
+0 Author: Alex Taylor
+0 Unofficial Model
+0 // Bowtie Quad (FirstTwo)
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+4 11 19 0 -16 19 0 -2 -13 0 -16 -13 0 -2
+0 // Bowtie Quad (MiddleTwo)
+0 MLCAD BTG Group name2
+4 14 59 0 -2 27 0 -16 59 0 -16 27 0 -2
+0 // Warped Quad
+0 MLCAD BTG Group name2
+4 5 94 -10 -21 94 0 -4 62 0 -4 62 0 -21
+0 GROUP 2 Group name2
+0
+0
+0
+0
+4 16 0 0 0 10 0 0 10 10 0 0 10 .1
+
+4 16 0 0 0 10 0 0 10 10 0 0 0 0
+
+0 TODO:wibble
+0 TODOLIST
+0 // TODO: wibble
+0 //TODO
+0 todo
+0 // fixMe

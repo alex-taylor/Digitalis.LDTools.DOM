@@ -1,0 +1,1000 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Page" xml:space="preserve">
+    <value>Page</value>
+    <comment>LDPage.TypeName</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LineIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\line.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save Screen</value>
+    <comment>LDSave.TypeName</comment>
+  </data>
+  <data name="NewShortcut" xml:space="preserve">
+    <value>New Shortcut</value>
+    <comment>LDPage.ctor()</comment>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pause Render</value>
+    <comment>LDPause.TypeName</comment>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear Screen</value>
+    <comment>LDClear.TypeName</comment>
+  </data>
+  <data name="OptionalLine" xml:space="preserve">
+    <value>Optional-Line</value>
+    <comment>LDOptionalLine.TypeName</comment>
+  </data>
+  <data name="PartPhysicalColourIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\physical.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Quadrilateral" xml:space="preserve">
+    <value>Quadrilateral</value>
+    <comment>LDQuadrilateral.TypeName</comment>
+  </data>
+  <data name="NewPart" xml:space="preserve">
+    <value>New Part</value>
+    <comment>LDPage.ctor()</comment>
+  </data>
+  <data name="NewSubpart" xml:space="preserve">
+    <value>New Subpart</value>
+    <comment>LDPage.ctor()</comment>
+  </data>
+  <data name="NewPrimitive" xml:space="preserve">
+    <value>New Primitive</value>
+    <comment>LDPage.ctor()</comment>
+  </data>
+  <data name="NewHiresPrimitive" xml:space="preserve">
+    <value>New Hires Primitive</value>
+    <comment>LDPage.ctor()</comment>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Group</value>
+    <comment>MLCadGroup.TypeName</comment>
+  </data>
+  <data name="NewModel" xml:space="preserve">
+    <value>New Model</value>
+    <comment>LDPage.ctor()</comment>
+  </data>
+  <data name="PartAliasIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\alias.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Comment</value>
+    <comment>LDComment.TypeName</comment>
+  </data>
+  <data name="Cacheing" xml:space="preserve">
+    <value>Cacheing...</value>
+    <comment>LibraryManager</comment>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Model</value>
+    <comment>LDTranslationCatalog.GetPageType()</comment>
+  </data>
+  <data name="Part_Physical_Colour" xml:space="preserve">
+    <value>Part (Physical-Colour)</value>
+    <comment>LDTranslationCatalog.GetPageType()</comment>
+  </data>
+  <data name="ColourDefinition" xml:space="preserve">
+    <value>Colour Definition</value>
+    <comment>LDColour.TypeName</comment>
+  </data>
+  <data name="Primitive" xml:space="preserve">
+    <value>Primitive</value>
+    <comment>LDTranslationCatalog.GetPageType()</comment>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+    <comment>LDWrite.TypeName</comment>
+  </data>
+  <data name="NewAlias" xml:space="preserve">
+    <value>New Alias</value>
+    <comment>LDPage.ctor()</comment>
+  </data>
+  <data name="Subpart" xml:space="preserve">
+    <value>Subpart</value>
+    <comment>LDTranslationCatalog.GetPageType()</comment>
+  </data>
+  <data name="OptionalLineIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\optionalline.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Untitled</value>
+    <comment>LDPage.ctor(), LDDocument</comment>
+  </data>
+  <data name="Shortcut_Physical_Colour" xml:space="preserve">
+    <value>Shortcut (Physical-Colour)</value>
+    <comment>LDTranslationCatalog.GetPageType()</comment>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>&lt;unknown&gt;</value>
+    <comment>LDReference.TypeName, LDPageType.Unknown</comment>
+  </data>
+  <data name="Step" xml:space="preserve">
+    <value>Step</value>
+    <comment>LDStep.TypeName</comment>
+  </data>
+  <data name="NewPhysical_Colour" xml:space="preserve">
+    <value>New Physical-Colour Shortcut</value>
+    <comment>LDPage.ctor()</comment>
+  </data>
+  <data name="Write" xml:space="preserve">
+    <value>Write Message</value>
+    <comment>LDWrite.TypeName</comment>
+  </data>
+  <data name="SubassemblyIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\subassembly.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GroupIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\group.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shortcut_Alias" xml:space="preserve">
+    <value>Shortcut (Alias)</value>
+    <comment>LDTranslationCatalog.GetPageType()</comment>
+  </data>
+  <data name="BFCFlag" xml:space="preserve">
+    <value>BFC Flag</value>
+    <comment>LDBFCFlag.TypeName</comment>
+  </data>
+  <data name="Shortcut" xml:space="preserve">
+    <value>Shortcut</value>
+    <comment>LDTranslationCatalog.GetPageType()</comment>
+  </data>
+  <data name="QuadrilateralIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\quadrilateral.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SubpartIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\subparts.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TriangleIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\triangle.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Part" xml:space="preserve">
+    <value>Part</value>
+    <comment>LDTranslationCatalog.GetPageType()</comment>
+  </data>
+  <data name="CommentIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\comment.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HiresPrimitive" xml:space="preserve">
+    <value>Hi-res Primitive</value>
+    <comment>LDTranslationCatalog.GetPageType()</comment>
+  </data>
+  <data name="Part_Alias" xml:space="preserve">
+    <value>Part (Alias)</value>
+    <comment>LDTranslationCatalog.GetPageType()</comment>
+  </data>
+  <data name="Triangle" xml:space="preserve">
+    <value>Triangle</value>
+    <comment>LDTriangle.TypeName</comment>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>Line</value>
+    <comment>LDLine.TypeName</comment>
+  </data>
+  <data name="SaveIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BFCFlagIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\bfc.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PrimitiveIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\primitive.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PartIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\part.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClearIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\clear.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ColourIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\colour.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PauseIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\pause.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StepIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\step.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WriteIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\write.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ModelIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\model.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DisableBackFaceCulling" xml:space="preserve">
+    <value>Disable back-face culling</value>
+    <comment>LDBFCFlag</comment>
+  </data>
+  <data name="EnableBackFaceCulling" xml:space="preserve">
+    <value>Enable back-face culling</value>
+    <comment>LDBFCFlag</comment>
+  </data>
+  <data name="EnableBackFaceCullingAndSetWindingModeClockwise" xml:space="preserve">
+    <value>Enable back-face culling and change winding to Clockwise</value>
+    <comment>LDBFCFlag</comment>
+  </data>
+  <data name="EnableBackFaceCullingAndSetWindingModeCounterClockwise" xml:space="preserve">
+    <value>Enable back-face culling and change winding to Counter-Clockwise</value>
+    <comment>LDBFCFlag</comment>
+  </data>
+  <data name="SetWindingModeClockwise" xml:space="preserve">
+    <value>Change winding to Clockwise</value>
+    <comment>LDBFCFlag</comment>
+  </data>
+  <data name="SetWindingModeCounterClockwise" xml:space="preserve">
+    <value>Change winding to Counter-Clockwise</value>
+    <comment>LDBFCFlag</comment>
+  </data>
+  <data name="Analytics_Bowtie" xml:space="preserve">
+    <value>The quadrilateral is bow-tied</value>
+    <comment>LDQuadrilateral</comment>
+  </data>
+  <data name="Analytics_ColinearQuad" xml:space="preserve">
+    <value>The quadrilateral has colinear vertices</value>
+    <comment>LDQuadrilateral</comment>
+  </data>
+  <data name="Analytics_Colocation" xml:space="preserve">
+    <value>Two or more vertices have the same value</value>
+    <comment>LDTriangle, LDQuadrilateral, LDTexmap</comment>
+  </data>
+  <data name="Analytics_Concave" xml:space="preserve">
+    <value>The quadrilateral is concave</value>
+    <comment>LDQuadrilateral</comment>
+  </data>
+  <data name="Analytics_FixedBowtie" xml:space="preserve">
+    <value>Fix bowtied quadrilateral</value>
+    <comment>LDQuadrilateral</comment>
+  </data>
+  <data name="Analytics_FixThis" xml:space="preserve">
+    <value>Fix this</value>
+    <comment>LDQuadrilateral, LDReference</comment>
+  </data>
+  <data name="Analytics_Warp" xml:space="preserve">
+    <value>The quadrilateral is warped by {0}°</value>
+    <comment>LDQuadrilateral.  {0} is the warp angle.</comment>
+  </data>
+  <data name="Analytics_Colocation_Control" xml:space="preserve">
+    <value>Both control-points have the same value</value>
+    <comment>LDOptionalLine</comment>
+  </data>
+  <data name="Analytics_Colocation_Line" xml:space="preserve">
+    <value>Both vertices have the same value</value>
+    <comment>LDLine, LDOptionalLine</comment>
+  </data>
+  <data name="Analytics_Colocation_Mixed" xml:space="preserve">
+    <value>Vertices and control-points have the same values</value>
+    <comment>LDOptionalLine</comment>
+  </data>
+  <data name="Analytics_DeleteElement" xml:space="preserve">
+    <value>Delete</value>
+    <comment>LDLine, LDOptionalLine, LDTriangle, LDQuadrilateral</comment>
+  </data>
+  <data name="Analytics_ElementDeleted" xml:space="preserve">
+    <value>Delete</value>
+    <comment>LDLine, LDOptionalLine, LDTriangle, LDQuadrilateral</comment>
+  </data>
+  <data name="Analytics_FixedMatrix" xml:space="preserve">
+    <value>Fix scaled transform</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_MatrixSingular" xml:space="preserve">
+    <value>The transform is singular</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_TargetInverted_Model" xml:space="preserve">
+    <value>Models should normally not be inverted</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_TargetMirrored_Model" xml:space="preserve">
+    <value>Models should normally not be mirrored</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_TargetScaled_Model" xml:space="preserve">
+    <value>Models should normally not be scaled</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_FixedInvertedTarget" xml:space="preserve">
+    <value>Fix inverted winding</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_FixTargetRedirect" xml:space="preserve">
+    <value>Use the new name</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_TargetAlias" xml:space="preserve">
+    <value>'{0}' is an alias for '{1}'</value>
+    <comment>LDReference. {0} is the TargetName of the Alias, {1} is the TargetName of the part it references.</comment>
+  </data>
+  <data name="Analytics_TargetMissing" xml:space="preserve">
+    <value>'{0}' cannot be found</value>
+    <comment>LDReference. {0} is the TargetName.</comment>
+  </data>
+  <data name="Analytics_TargetMovedTo" xml:space="preserve">
+    <value>'{0}' has been moved to '{1}'</value>
+    <comment>LDReference. {0} is the TargetName of the MovedTo, {1} is the TargetName of the part it references.</comment>
+  </data>
+  <data name="Analytics_FixedTargetRedirect" xml:space="preserve">
+    <value>Change Reference</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_InvalidColour" xml:space="preserve">
+    <value>Colour-value {0} cannot be found</value>
+    <comment>LDGraphic. {0} is an LDGraphic.ColourValue.</comment>
+  </data>
+  <data name="Analytics_ColinearTriangle" xml:space="preserve">
+    <value>The triangle has colinear vertices</value>
+    <comment>LDTriangle</comment>
+  </data>
+  <data name="Analytics_TargetInverted_Part" xml:space="preserve">
+    <value>Parts should normally not be inverted</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_TargetInverted_Primitive" xml:space="preserve">
+    <value>'{0}' should normally not be inverted</value>
+    <comment>LDReference. {0} is the TargetName of the primitive.</comment>
+  </data>
+  <data name="Analytics_TargetMirrored_Part" xml:space="preserve">
+    <value>Parts should normally not be mirrored</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_TargetMirrored_Primitive" xml:space="preserve">
+    <value>'{0}' should normally not be mirrored</value>
+    <comment>LDReference. {0} is the TargetName of the primitive.</comment>
+  </data>
+  <data name="Analytics_TargetScaled_Part" xml:space="preserve">
+    <value>Parts should normally not be scaled</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_TargetScaled_Primitive" xml:space="preserve">
+    <value>'{0}' should normally not be scaled</value>
+    <comment>LDReference. {0} is the TargetName of the primitive.</comment>
+  </data>
+  <data name="Analytics_FixedInvalidColour" xml:space="preserve">
+    <value>Set colour</value>
+    <comment>LDLine, LDOptionalLine, LDTriangle, LDQuadrilateral</comment>
+  </data>
+  <data name="Analytics_FixInvalidColour" xml:space="preserve">
+    <value>Change to {0}</value>
+    <comment>LDReference, LDLine, LDTriangle, LDQuadrilateral, LDOptionalLine. {0} is the name of the colour to set.</comment>
+  </data>
+  <data name="Analytics_InvalidColour_Line" xml:space="preserve">
+    <value>Lines should not use {0}</value>
+    <comment>LDLine, LDOptionalLine. {0} is the name for colour-16.</comment>
+  </data>
+  <data name="Analytics_InvalidColour_Polygon" xml:space="preserve">
+    <value>Only lines should use {0}</value>
+    <comment>LDTriangle, LDQuadrilateral. {0} is the name for colour-24.</comment>
+  </data>
+  <data name="Analytics_TargetMirrored_Primitive_XZ" xml:space="preserve">
+    <value>'{0}' should only be mirrored in the Y direction</value>
+    <comment>LDReference. {0} is the TargetName of the primitive.</comment>
+  </data>
+  <data name="Analytics_TargetScaled_Primitive_XZ" xml:space="preserve">
+    <value>'{0}' should only be scaled in the Y direction</value>
+    <comment>LDReference. {0} is the TargetName of the primitive.</comment>
+  </data>
+  <data name="Analytics_TargetScaled_Primitive_Y" xml:space="preserve">
+    <value>'{0}' should not be scaled in the Y direction</value>
+    <comment>LDReference. {0} is the TargetName of the primitive.</comment>
+  </data>
+  <data name="NewShortcutAlias" xml:space="preserve">
+    <value>New Shortcut Alias</value>
+    <comment>LDPage.ctor()</comment>
+  </data>
+  <data name="Analytics_PageBFC_Invalid" xml:space="preserve">
+    <value>Primitives should use Counter-clockwise back-face culling</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageBFC_Missing" xml:space="preserve">
+    <value>Back-face culling mode should be set</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageCategory_Mismatch" xml:space="preserve">
+    <value>Title specifies a part-category, but Category will override this</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageCategory_Missing" xml:space="preserve">
+    <value>Category should be set</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageKeyword_Duplicates" xml:space="preserve">
+    <value>Two or more keywords are the same</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageKeyword_InTitle" xml:space="preserve">
+    <value>One or more keywords also appear in the Title</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageLicense_Invalid" xml:space="preserve">
+    <value>The Creative Commons license is required to submit files to the LDraw.org Parts Tracker or Official Model Repository</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_InvalidChars" xml:space="preserve">
+    <value>should only contain the characters a-z, A-Z, 0-9, - and _</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_TooLong" xml:space="preserve">
+    <value>Name should be no more than 21 characters in length</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageOrigin_OutsideBoundingBox" xml:space="preserve">
+    <value>The origin of the page is outside its bounding-box</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_TooLong" xml:space="preserve">
+    <value>Title should be no more than 64 characters in length</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_UnneededTilde" xml:space="preserve">
+    <value>should not start with a tilde</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_MissingTilde" xml:space="preserve">
+    <value>should start with a tilde</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_UnneededUnderscore" xml:space="preserve">
+    <value>should not start with an underscore</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_MissingUnderscore" xml:space="preserve">
+    <value>should start with an underscore</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_AliasMismatch" xml:space="preserve">
+    <value>Title should be '{0}'</value>
+    <comment>LDPage. {0} is the Title of the referenced page.</comment>
+  </data>
+  <data name="Analytics_PageTitle_PhysicalColourMismatch" xml:space="preserve">
+    <value>Title should be '_{0} [{1}]'</value>
+    <comment>LDPage. {0} is the Title of the referenced page, {1} is its colour-value.</comment>
+  </data>
+  <data name="Analytics_PageBFC_Changed" xml:space="preserve">
+    <value>Change page's back-face culling mode</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageBFC_Clear" xml:space="preserve">
+    <value>Remove back-face culling mode</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageBFC_SetClockwise" xml:space="preserve">
+    <value>Set back-face culling mode to Clockwise</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageBFC_SetCounterClockwise" xml:space="preserve">
+    <value>Set back-face culling mode to CounterClockwise</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageBFC_SetUncertified" xml:space="preserve">
+    <value>Set back-face culling mode to Disabled</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageCategory_Changed" xml:space="preserve">
+    <value>Change page's Category</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageCategory_Remove" xml:space="preserve">
+    <value>Remove page's Category</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageKeyword_Removed" xml:space="preserve">
+    <value>Remove duplicate keywords</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageLicense_Changed" xml:space="preserve">
+    <value>Change page's License</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_Changed" xml:space="preserve">
+    <value>Change page's Name</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_InvalidFormat" xml:space="preserve">
+    <value>Name is invalid</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_InvalidPatternMarker" xml:space="preserve">
+    <value>invalid pattern-marker '{0}', should be 'pXX'</value>
+    <comment>LDPage. {0} is the invalid marker.</comment>
+  </data>
+  <data name="Analytics_PageName_InvalidPrefix" xml:space="preserve">
+    <value>invalid prefix-character '{0}', should be s, u or x</value>
+    <comment>LDPage. {0} is the invalid character.</comment>
+  </data>
+  <data name="Analytics_PageName_InvalidShortcutMarker" xml:space="preserve">
+    <value>invalid shortcut-marker '{0}', should be 'cNN' or 'dNN'</value>
+    <comment>LDPage. {0} is the invalid marker.</comment>
+  </data>
+  <data name="Analytics_PageName_InvalidSubpartMarker" xml:space="preserve">
+    <value>invalid subpart-marker '{0}', should be 'sNN'</value>
+    <comment>LDPage. {0} is the invalid marker.</comment>
+  </data>
+  <data name="Analytics_PageName_InvalidSuffix" xml:space="preserve">
+    <value>invalid suffix-character '{0}', should be a letter</value>
+    <comment>LDPage. {0} is the invalid character.</comment>
+  </data>
+  <data name="Analytics_PageName_MissingShortcutMarker" xml:space="preserve">
+    <value>missing shortcut-marker, should be 'cNN' or dNN'</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_MissingSubpartMarker" xml:space="preserve">
+    <value>missing subpart-marker, should be 'sNN'</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_RemoveShortcutMarker" xml:space="preserve">
+    <value>Remove shortcut-marker</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_RemoveMarker" xml:space="preserve">
+    <value>Remove marker '{0}'</value>
+    <comment>LDPage. {0} is the marker.</comment>
+  </data>
+  <data name="Analytics_PageName_UnneededShortcutMarker" xml:space="preserve">
+    <value>should not have shortcut-marker '{0}'</value>
+    <comment>LDPage. {0} is the shortcut-marker.</comment>
+  </data>
+  <data name="Analytics_PageName_UnneededSubpartMarker" xml:space="preserve">
+    <value>should not have subpart-marker '{0}'</value>
+    <comment>LDPage. {0} is the subpart-marker.</comment>
+  </data>
+  <data name="Analytics_PageOrigin_Changed" xml:space="preserve">
+    <value>Change page's origin</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageOrigin_SetCentreBottom" xml:space="preserve">
+    <value>Set origin to the page's bottom</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageOrigin_SetCentreBoundingBox" xml:space="preserve">
+    <value>Set origin to the page's centre</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageOrigin_SetCentreTop" xml:space="preserve">
+    <value>Set origin to the page's top</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_AddColourValue" xml:space="preserve">
+    <value>Add colour-value '[{0}]'</value>
+    <comment>LDPage. {0} is the colour-value.</comment>
+  </data>
+  <data name="Analytics_PageTitle_AddTilde" xml:space="preserve">
+    <value>Add missing tilde</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_AddUnderscore" xml:space="preserve">
+    <value>Add missing underscore</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_Changed" xml:space="preserve">
+    <value>Change page's Title</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_CorrectWhitespace" xml:space="preserve">
+    <value>Correct spacing</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_InvalidFormat" xml:space="preserve">
+    <value>Title is invalid</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_MissingColourValue" xml:space="preserve">
+    <value>should end with a colour-value-marker</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_MissingSpaceBeforeNumber" xml:space="preserve">
+    <value>single-digit numbers should have leading spaces</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_RemoveColourValue" xml:space="preserve">
+    <value>Remove colour-value</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_RemoveTilde" xml:space="preserve">
+    <value>Remove tilde</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_RemoveUnderscore" xml:space="preserve">
+    <value>Remove underscore</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_UnneededColourValue" xml:space="preserve">
+    <value>should not end with a colour-value-marker</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageTitle_UnneededWhitespace" xml:space="preserve">
+    <value>words should be separated by single spaces</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_ChangePrefix" xml:space="preserve">
+    <value>Set prefix-character to '{0}'</value>
+    <comment>LDPage. {0} is the new prefix-character.</comment>
+  </data>
+  <data name="Analytics_PageName_DuplicateMarkers" xml:space="preserve">
+    <value>duplicate markers '{0}'</value>
+    <comment>LDPage. {0} are the markers.</comment>
+  </data>
+  <data name="Analytics_PageName_InvalidMarkerSequence" xml:space="preserve">
+    <value>markers '{0}' are in the wrong order, should be '{1}'</value>
+    <comment>LDPage. {0} and {1} are markers.</comment>
+  </data>
+  <data name="Analytics_PageName_RemovePrefix" xml:space="preserve">
+    <value>Remove prefix-character</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_RemoveSuffix" xml:space="preserve">
+    <value>Remove suffix-character</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_SwapMarkers" xml:space="preserve">
+    <value>Swap marker order</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_UnneededPatternMarker" xml:space="preserve">
+    <value>should not have pattern-marker '{0}'</value>
+    <comment>LDPage. {0} is the pattern-marker.</comment>
+  </data>
+  <data name="Analytics_PageName_UnneededPrefix" xml:space="preserve">
+    <value>should not have prefix-character '{0}'</value>
+    <comment>LDPage. {0} is the prefix-character.</comment>
+  </data>
+  <data name="Analytics_PageName_UnneededSuffix" xml:space="preserve">
+    <value>should not have suffix-character '{0}'</value>
+    <comment>LDPage. {0} is the suffix-character.</comment>
+  </data>
+  <data name="Analytics_PageName_Unrecognised_Alias" xml:space="preserve">
+    <value>expected format is 'number[suffix]'</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_Unrecognised_Part" xml:space="preserve">
+    <value>expected format is '[prefix]number[suffix][pattern-code][shortcut-code]'</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_Unrecognised_Simple" xml:space="preserve">
+    <value>expected format is 'number'</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageName_Unrecognised_Subpart" xml:space="preserve">
+    <value>expected format is '[prefix]number[suffix][pattern-code]subpart-code'</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_Comment_AddSlashes" xml:space="preserve">
+    <value>Add '//' to comment</value>
+    <comment>LDComment</comment>
+  </data>
+  <data name="Analytics_Comment_MissingSlashes" xml:space="preserve">
+    <value>Comments should start with '//'</value>
+    <comment>LDComment</comment>
+  </data>
+  <data name="Analytics_Colour_InvalidName" xml:space="preserve">
+    <value>Colour names should only contain upper- and lower-case letters, digits and the underscore, and should start with a letter</value>
+    <comment>LDColour</comment>
+  </data>
+  <data name="Analytics_Colour_InvalidEdge" xml:space="preserve">
+    <value>EdgeCode must be set to either a Direct Colours value or the code of another Colour Definition</value>
+    <comment>LDColour</comment>
+  </data>
+  <data name="Verifying" xml:space="preserve">
+    <value>Verifying...</value>
+    <comment>LDDocument.Load()</comment>
+  </data>
+  <data name="Analytics_TargetUnreleased_Held" xml:space="preserve">
+    <value>'{0}' has not been released yet and contains errors</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Texmap" xml:space="preserve">
+    <value>Texture</value>
+    <comment>LDTexmap.TypeName</comment>
+  </data>
+  <data name="TexmapIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\texmap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GeometryIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\geometry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Geometry_Fallback" xml:space="preserve">
+    <value>Fallback Elements</value>
+    <comment>LDTexmap.GeometryCollection.TypeName</comment>
+  </data>
+  <data name="Geometry_Texture" xml:space="preserve">
+    <value>Textured Elements</value>
+    <comment>LDTexmap.GeometryCollection.TypeName</comment>
+  </data>
+  <data name="Analytics_TargetName_InvalidChars" xml:space="preserve">
+    <value>TargetName should only contain the characters a-z, A-Z, 0-9, -, _ and \</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Geometry_Shared" xml:space="preserve">
+    <value>Shared Elements</value>
+    <comment>LDTexmap.GeometryCollection.TypeName</comment>
+  </data>
+  <data name="Analytics_TexmapGeometryMissing" xml:space="preserve">
+    <value>Geometry is missing or incomplete</value>
+    <comment>LDTexmap</comment>
+  </data>
+  <data name="Analytics_TexmapGlossmapMissing" xml:space="preserve">
+    <value>Glossmap image '{0}' cannot be found</value>
+    <comment>LDTexmap. {0} is the name of the glossmap image.</comment>
+  </data>
+  <data name="Analytics_TexmapGlossmapPathInvalidChars" xml:space="preserve">
+    <value>Glossmap should only contain the characters a-z, A-Z, 0-9, \, -, ., and _</value>
+    <comment>LDTexmap</comment>
+  </data>
+  <data name="Analytics_TexmapGlossmapPathTooLong" xml:space="preserve">
+    <value>Glossmap should be no more than 21 characters in length</value>
+    <comment>LDTexmap</comment>
+  </data>
+  <data name="Analytics_TexmapTextureMissing" xml:space="preserve">
+    <value>Texture image '{0}' cannot be found</value>
+    <comment>LDTexmap. {0} is the name of the texture image.</comment>
+  </data>
+  <data name="Analytics_TexmapTexturePathInvalidChars" xml:space="preserve">
+    <value>Texture should only contain the characters a-z, A-Z, 0-9, \, -, ., and _</value>
+    <comment>LDTexmap</comment>
+  </data>
+  <data name="Analytics_TexmapTexturePathTooLong" xml:space="preserve">
+    <value>Texture should be no more than 21 characters in length</value>
+    <comment>LDTexmap</comment>
+  </data>
+  <data name="Step_Absolute" xml:space="preserve">
+    <value>Set the viewpoint rotation to (x:{0}° y:{1}° z:{2}°)</value>
+    <comment>LDStep.Description</comment>
+  </data>
+  <data name="Step_Additive" xml:space="preserve">
+    <value>Rotate the viewpoint by (x:{0}° y:{1}° z:{2}°) relative to the previous setting</value>
+    <comment>LDStep.Description</comment>
+  </data>
+  <data name="Step_Relative" xml:space="preserve">
+    <value>Rotate the viewpoint by (x:{0}° y:{1}° z:{2}°) relative to its default setting</value>
+    <comment>LDStep.Description</comment>
+  </data>
+  <data name="Step_Reset" xml:space="preserve">
+    <value>Restore the viewpoint to its default setting</value>
+    <comment>LDStep.Description</comment>
+  </data>
+  <data name="ShortcutAliasIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\shortcutalias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShortcutIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\shortcut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShortcutPhysicalColourIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\shortcutphysical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>Reference</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Undefined" xml:space="preserve">
+    <value>Undefined</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="ElementCategory_MetaCommand" xml:space="preserve">
+    <value>Meta-command</value>
+    <comment>ElementCategoryAttributes</comment>
+  </data>
+  <data name="Certified" xml:space="preserve">
+    <value>Certified</value>
+    <comment>LDTranslationCatalog.GetDocumentStatus()</comment>
+  </data>
+  <data name="Held" xml:space="preserve">
+    <value>Has one or more 'hold' votes</value>
+    <comment>LDTranslationCatalog.GetDocumentStatus()</comment>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Private file</value>
+    <comment>LDTranslationCatalog.GetDocumentStatus()</comment>
+  </data>
+  <data name="ReadyForRelease" xml:space="preserve">
+    <value>Ready for release</value>
+    <comment>LDTranslationCatalog.GetDocumentStatus()</comment>
+  </data>
+  <data name="Released" xml:space="preserve">
+    <value>Released</value>
+    <comment>LDTranslationCatalog.GetDocumentStatus()</comment>
+  </data>
+  <data name="Rework" xml:space="preserve">
+    <value>Released, but being reworked</value>
+    <comment>LDTranslationCatalog.GetDocumentStatus()</comment>
+  </data>
+  <data name="Uncertified" xml:space="preserve">
+    <value>Not yet certified</value>
+    <comment>LDTranslationCatalog.GetDocumentStatus()</comment>
+  </data>
+  <data name="Analytics_TargetCircularReference" xml:space="preserve">
+    <value>'{0}' will cause a model-loop</value>
+    <comment>LDReference. {0} is the TargetName.</comment>
+  </data>
+  <data name="Analytics_TargetInverted_Invalid" xml:space="preserve">
+    <value>'{0}' cannot be inverted as it is not BFC-enabled</value>
+    <comment>LDReference. {0} is the TargetName.</comment>
+  </data>
+  <data name="Unreleased" xml:space="preserve">
+    <value>Unreleased</value>
+    <comment>LDTranslationCatalog.GetDocumentStatus()</comment>
+  </data>
+  <data name="Analytics_TargetUnreleased_Uncertified" xml:space="preserve">
+    <value>'{0}' has not been released yet and may have errors</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_TargetUnreleased_Unreleased" xml:space="preserve">
+    <value>'{0}' has not been released yet</value>
+    <comment>LDReference</comment>
+  </data>
+  <data name="Analytics_PageAuthor_Missing" xml:space="preserve">
+    <value>Author should be set</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageCategory_Clear" xml:space="preserve">
+    <value>Remove category</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageCategory_Cleared" xml:space="preserve">
+    <value>Remove category</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_PageUser_Missing" xml:space="preserve">
+    <value>User should be set</value>
+    <comment>LDPage</comment>
+  </data>
+  <data name="Analytics_InvalidDirectColour" xml:space="preserve">
+    <value>Transparent Direct Colours should not be used</value>
+    <comment>LDGraphic</comment>
+  </data>
+  <data name="Material_Chrome" xml:space="preserve">
+    <value>Chrome</value>
+    <comment>Materials</comment>
+  </data>
+  <data name="Material_Glitter" xml:space="preserve">
+    <value>Glitter</value>
+    <comment>Materials</comment>
+  </data>
+  <data name="Material_MatteMetallic" xml:space="preserve">
+    <value>Matte-metallic</value>
+    <comment>Materials</comment>
+  </data>
+  <data name="Material_Metal" xml:space="preserve">
+    <value>Metal</value>
+    <comment>Materials</comment>
+  </data>
+  <data name="Material_Pearlescent" xml:space="preserve">
+    <value>Pearlescent</value>
+    <comment>Materials</comment>
+  </data>
+  <data name="Material_Plastic" xml:space="preserve">
+    <value>Plastic</value>
+    <comment>Materials</comment>
+  </data>
+  <data name="Material_Rubber" xml:space="preserve">
+    <value>Rubber</value>
+    <comment>Materials</comment>
+  </data>
+  <data name="Material_Speckle" xml:space="preserve">
+    <value>Speckle</value>
+    <comment>Materials</comment>
+  </data>
+  <data name="Material_Unknown" xml:space="preserve">
+    <value>Other</value>
+    <comment>Materials</comment>
+  </data>
+</root>
