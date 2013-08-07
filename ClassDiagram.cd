@@ -1,0 +1,983 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Digitalis.LDTools.DOM.API.MetaCommandPatternAttribute" Collapsed="true">
+    <Position X="42.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Attributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.ElementFlagsAttribute" Collapsed="true">
+    <Position X="46.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Attributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.DefaultIconAttribute" Collapsed="true">
+    <Position X="46.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>API\Attributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.TypeNameAttribute" Collapsed="true">
+    <Position X="46.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Attributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.ElementCategoryAttribute" Collapsed="true">
+    <Position X="42.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Attributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.DocumentTreeChangedEventArgs" Collapsed="true">
+    <Position X="48" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Events.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.ObjectChangedEventArgs" Collapsed="true">
+    <Position X="44.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIEAAAAAAAA=</HashCode>
+      <FileName>API\Events.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.CircularReferenceException" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.DuplicateNameException" Collapsed="true">
+    <Position X="49.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.DuplicatePageException" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.ParserException" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAgAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>API\Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.ElementLockedException" Collapsed="true">
+    <Position X="48" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.ObjectFrozenException" Collapsed="true">
+    <Position X="46.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.API.SyntaxException" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.CanInsertHelper" Collapsed="true">
+    <Position X="42.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQACAAAAAAAAAAAAAAJAiAAgAAAiAAAAAAIAAA=</HashCode>
+      <FileName>CanInsertHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.CompositeElement" Collapsed="true">
+    <Position X="29" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkIAIEQAACAAABAQCAAABAQEoQAABAAECAAAAABQIBA=</HashCode>
+      <FileName>CompositeElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.ElementDefinition" Collapsed="true">
+    <Position X="44.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAQAAAAAAAgAAAAIAAAAAFAAAQAAAAAACAA=</HashCode>
+      <FileName>Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.Configuration" Collapsed="true">
+    <Position X="44.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAHIIKiCUQAAEggVLAQBRAKCQQTIJWBIAgAIAYJRA=</HashCode>
+      <FileName>Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.DocumentElement" Collapsed="true">
+    <Position X="20" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAoAAAIIgAAABAAIAAACAAAACQBACAAQAAAEAAAA=</HashCode>
+      <FileName>DocumentElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.DOMObject" Collapsed="true">
+    <Position X="21.25" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEEIAUASAAAACBBAAACBAAAAAAYAIAAIAAAAAQABI=</HashCode>
+      <FileName>DOMObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.Element" Collapsed="true">
+    <Position X="20" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEACIAAACAAAAABAAAAQAAQAAAIQAAAICAAAABAgAA=</HashCode>
+      <FileName>Element.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.ElementCollection" Collapsed="true">
+    <Position X="38" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkMAOMUIBSQMAbCQKABARhQEoSAAFAAECAAEAAhxIBA=</HashCode>
+      <FileName>ElementCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.EnumHelper" Collapsed="true">
+    <Position X="49.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnumHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.ReferenceCacheChangedEventArgs" Collapsed="true">
+    <Position X="49.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Events.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDrawLibraryAlreadyLoadedException" Collapsed="true">
+    <Position X="44.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.Graphic" Collapsed="true">
+    <Position X="26.75" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgAAABGNAIIIEKAIAcJAIBQAISpAAABEBQABMIiwQCA=</HashCode>
+      <FileName>Graphic.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.Groupable" Collapsed="true">
+    <Position X="21.25" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAEkAAACAAAACIACAAAQAgAAAAAAABBBAAAAAQgAA=</HashCode>
+      <FileName>Groupable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.IntHelper" Collapsed="true">
+    <Position X="42.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IntHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDBFCFlag" Collapsed="true">
+    <Position X="8.75" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgCQAAAiAAAIAAAAAACAAAAKABAAACQAAAEQAAA=</HashCode>
+      <FileName>LDBFCFlag.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDClear" Collapsed="true">
+    <Position X="11" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAQAAAgAAAIAAAAAAAAAAAKABAAACQAAAEAAAA=</HashCode>
+      <FileName>LDClear.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDColour" Collapsed="true">
+    <Position X="15.5" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gFAAKkASQKJiQAAIjA6gkAwgEWCKADBBCCwoAQM4AAA=</HashCode>
+      <FileName>LDColour.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDComment" Collapsed="true">
+    <Position X="35.75" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAgAQAIIiQAAMAABAAAAAAAAKAFUIAKQACAEQAAA=</HashCode>
+      <FileName>LDComment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDDocument" Collapsed="true">
+    <Position X="40.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gnYgsMcUZCSoARCROFBChAQADwAAJAAECYUGwBBQMDA=</HashCode>
+      <FileName>LDDocument.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDLine" Collapsed="true">
+    <Position X="31.25" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAgAQAAIiwCCIAIAAAAAAAAIKABACBKQAAAkAACA=</HashCode>
+      <FileName>LDLine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDOptionalLine" Collapsed="true">
+    <Position X="33.5" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAgAQAAIiyCCIAIAAAAAAAAIKABECBLQAAAkAACA=</HashCode>
+      <FileName>LDOptionalLine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDPage" Collapsed="true">
+    <Position X="2" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>pv75u19dT/audf392BLSRKWQoaQi37guv6VOVGn+urA=</HashCode>
+      <FileName>LDPage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.ElementAccessor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="51.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkMAKEQAAAAADBAQCAAABQQAQQAAJAAECAAAAABQIBA=</HashCode>
+      <FileName>LDPage.ElementsAccessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDPause" Collapsed="true">
+    <Position X="6.5" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAQAAAgAAAIAAAAAAAAAAAKABAAACQAAAEAAAA=</HashCode>
+      <FileName>LDPause.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDQuadrilateral" Collapsed="true">
+    <Position X="20" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkEAQggQAIOi8CAJAJBBQAFCwAJOCBABpKQAAIkAACA=</HashCode>
+      <FileName>LDQuadrilateral.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDReference" Collapsed="true">
+    <Position X="22.25" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gsGCelI4GKanBqQ4iYgC7SXhQa57yJdmjLaBQflWBCA=</HashCode>
+      <FileName>LDReference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDSave" Collapsed="true">
+    <Position X="13.25" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAQAAAgAAAIAAAAAAAAAAAKABAAACQAAAEAAAA=</HashCode>
+      <FileName>LDSave.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDStep" Collapsed="true">
+    <Position X="38" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAsgEgAYAKQyEAAQAgBAQAAAIgADITAAIIQAAAMQYAE=</HashCode>
+      <FileName>LDStep.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDTexmap" Collapsed="true">
+    <Position X="24.5" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MkIDK1QQEabikTEYGIAQJCTEobBKBBQlrKYAOolRoDA=</HashCode>
+      <FileName>LDTexmap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDTranslationCatalog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="46.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIIAgIgBAMAEQBESCBABBEQAEBAAgxgEAQAgAABQIAQ=</HashCode>
+      <FileName>LDTranslationCatalog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDTriangle" Collapsed="true">
+    <Position X="26.75" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAQgAQAIKi4CQIAIAAAAAAAAJKABAABKQAAIkAACA=</HashCode>
+      <FileName>LDTriangle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.LDWrite" Collapsed="true">
+    <Position X="17.75" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAQAAAiQAAIAAAAAAAAAAAKABAIACQACAEQAAA=</HashCode>
+      <FileName>LDWrite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.Material" Collapsed="true">
+    <Position X="10" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAGAAAAQAgAAAABAAAAAAAAAAAwAAAAAAAABACABA=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.Materials" Collapsed="true">
+    <Position X="51.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.UnknownMaterial" Collapsed="true">
+    <Position X="1" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAkAAAAAAAAAAAAAAAAAAEAAIAAAAACABA=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.PlasticMaterial" Collapsed="true">
+    <Position X="3.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAACABA=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.ChromeMaterial" Collapsed="true">
+    <Position X="5.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAADABA=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.PearlescentMaterial" Collapsed="true">
+    <Position X="7.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAADABA=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.RubberMaterial" Collapsed="true">
+    <Position X="10" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAADABA=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.MatteMetallicMaterial" Collapsed="true">
+    <Position X="12.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAADABA=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.MetalMaterial" Collapsed="true">
+    <Position X="14.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAADABA=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.GlitterMaterial" Collapsed="true">
+    <Position X="16.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAgQAAAAAAAAAAAAAAAAAAEAAAAAgACABA=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.SpeckleMaterial" Collapsed="true">
+    <Position X="19" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAACABA=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.GrainedMaterial" Collapsed="true">
+    <Position X="18" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABCAAAAAAAAAAAgAAAAAgAAAAECIBAUACgAkAAICABA=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.MetaCommand" Collapsed="true">
+    <Position X="12.25" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>MetaCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.MLCadGroup" Collapsed="true">
+    <Position X="4.25" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAMgAQCAAiADAQAABABAQAACAOABAEAKQAAAlYIAA=</HashCode>
+      <FileName>MLCadGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.PageElement" Collapsed="true">
+    <Position X="21.25" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAGMAACAAQAAABAAAAAAAAAAAAQAACIAAAAAAQAAA=</HashCode>
+      <FileName>PageElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.Palette" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="48" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACABABgAKBAgEAQAAAAAQgAUAAAAwAAAAAQ=</HashCode>
+      <FileName>Palette.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.WindingModeHelper" Collapsed="true">
+    <Position X="49.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WindingModeHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.Library.IndexCard" Collapsed="true">
+    <Position X="51.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQBAgEAAgIYBEAQAFAAAIQCAAAAAAAiAQYAQAAAiAA=</HashCode>
+      <FileName>IndexCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.Library.LibraryChangedEventArgs" Collapsed="true">
+    <Position X="48" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAABAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LibraryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.Library.LibraryManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="49.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAIRkICgAAOEIBgIDJAkBAZgAEASACgEAAAAAhACAAA=</HashCode>
+      <FileName>LibraryManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.Properties.Resources" Collapsed="true">
+    <Position X="51.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CJws7PjX+PtWbaM//VfB1XbR/bUX2Fl56dtY7ePtlfs=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.DOM.Properties.Settings" Collapsed="true">
+    <Position X="42.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAgAAAAAAIAAACAAAIAACAAABAAAAAQAIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.TargetWatcher" Collapsed="true">
+    <Position X="44.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAABAUAAAAQAoAAAAAAAACAAAAAACAAAgEAABAQ=</HashCode>
+      <FileName>TargetWatcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Digitalis.LDTools.Utils.Vector3dHelper" Collapsed="true">
+    <Position X="48" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAgAAAAAQAAAAAEAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vector3dHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Digitalis.LDTools.DOM.Geom.Box3d" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="42.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAAAAAAAAAAgAAEgEADgARAAKABAIAAAAAAARAQAiA=</HashCode>
+      <FileName>Box3d.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Digitalis.LDTools.DOM.Geom.Matrix3d" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="48" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAEAAAAAAABAEqAIAACAAkANwALAAAEAAAAgAAiA=</HashCode>
+      <FileName>Matrix3d.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Digitalis.LDTools.DOM.LDHistory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="44.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAJAAgAAAEgAAAAAQAAAAAAIAEAAAAAAAAAyA=</HashCode>
+      <FileName>LDHistory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Digitalis.LDTools.DOM.LDUpdate" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="46.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAABQAAAAABgAAAAAIAAAAAAIAAAAAAABAAAiA=</HashCode>
+      <FileName>LDUpdate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Digitalis.LDTools.DOM.MLCadRotationConfig" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="49.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAgAAAgAAAAAQAAAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>MLCadRotationConfig.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Interface Name="Digitalis.LDTools.DOM.API.Analytics.IProblemDescriptor" Collapsed="true">
+    <Position X="48" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAgAAAAAAAAABAAAAAAAAAQAAIA=</HashCode>
+      <FileName>API\Analytics.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.Analytics.IFixDescriptor" Collapsed="true">
+    <Position X="44.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAEAIBAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>API\Analytics.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IBFCFlag" Collapsed="true">
+    <Position X="21.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>API\IBFCFlag.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IClear" Collapsed="true">
+    <Position X="23.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\IClear.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IColour" Collapsed="true">
+    <Position X="28" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAACAAAAAAAAAAACAwgkAQgAEAAAAAAAAAgAAIIAAA=</HashCode>
+      <FileName>API\IColour.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IComment" Collapsed="true">
+    <Position X="19" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>API\IComment.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.ICompositeElement" Collapsed="true">
+    <Position X="15.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\ICompositeElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IDocument" Collapsed="true">
+    <Position X="22.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAAIIEJAAAAAABOEAABAAAAAAAAAAACAUAQAAAAAA=</HashCode>
+      <FileName>API\IDocument.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IDocumentElement" Collapsed="true">
+    <Position X="24.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAIIgAAAAAAIAAAAAAAACABACAAQAAAEAAAA=</HashCode>
+      <FileName>API\IDocumentElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IDOMObject" Collapsed="true">
+    <Position X="22.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEIAQAAAAAAAABAAAABAAAAAAQAAAAIAAAAAAABI=</HashCode>
+      <FileName>API\IDOMObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IDOMObjectCollection&lt;T&gt;" Collapsed="true">
+    <Position X="25.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAIAQAAAAAAAAAAAAAAAAAAQAABAAAAAAAAAAAABA=</HashCode>
+      <FileName>API\IDOMObjectCollection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IElement" Collapsed="true">
+    <Position X="25.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAACAAAABAAAA=</HashCode>
+      <FileName>API\IElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IElementCollection" Collapsed="true">
+    <Position X="16.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAQAAEoAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\IElementCollection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IElementEditor" Collapsed="true">
+    <Position X="42.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAgIAIEAAAABEAAAAgAAACAAAACAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>API\IElementEditor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IGeometric" Collapsed="true">
+    <Position X="16.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAABAAAQAACAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>API\IGeometric.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IGraphic" Collapsed="true">
+    <Position X="21.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAABABAAAAEAAAAIAAAAAAIQAAAAAABQAAAACQACA=</HashCode>
+      <FileName>API\IGraphic.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IGroup" Collapsed="true">
+    <Position X="21.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>API\IGroup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IGroupable" Collapsed="true">
+    <Position X="25.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAkAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\IGroupable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.ILine" Collapsed="true">
+    <Position X="19" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\ILine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IMaterial" Collapsed="true">
+    <Position X="46.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAGAAAAAAgAAAABAAAAAAAAAAAQAAAAAAAABACABA=</HashCode>
+      <FileName>API\IMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IMetaCommand" Collapsed="true">
+    <Position X="27" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\IMetaCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IOptionalLine" Collapsed="true">
+    <Position X="23.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAyAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>API\IOptionalLine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IPage" Collapsed="true">
+    <Position X="16.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAxBEQIAQBAIAEARgBBQAISAoAQCBgAiBAQKEEAImIA=</HashCode>
+      <FileName>API\IPage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IPageElement" Collapsed="true">
+    <Position X="25.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACEAAAAAQAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAA=</HashCode>
+      <FileName>API\IPageElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IPause" Collapsed="true">
+    <Position X="32.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\IPause.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IQuadrilateral" Collapsed="true">
+    <Position X="25.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAA8AAAAAAAQAAAAAAICAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\IQuadrilateral.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IReference" Collapsed="true">
+    <Position X="16.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAEAAAAAAAAAAAIAAACAAAAQgAAAgCBAAACAQAAA=</HashCode>
+      <FileName>API\IReference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.ISave" Collapsed="true">
+    <Position X="25.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\ISave.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IStep" Collapsed="true">
+    <Position X="15.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAogAAAAAIAQEAAAAAAAAAAAAAABASAAAAAAAAAAYAE=</HashCode>
+      <FileName>API\IStep.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.ITexmap" Collapsed="true">
+    <Position X="18.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAQAAABAgAAIAAAAAACAABAIAAAggAIAGAAQoAA=</HashCode>
+      <FileName>API\ITexmap.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.ITexmapGeometry" Collapsed="true">
+    <Position X="13" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>API\ITexmapGeometry.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.ITriangle" Collapsed="true">
+    <Position X="21.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAA4AAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\ITriangle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Digitalis.LDTools.DOM.API.IWrite" Collapsed="true">
+    <Position X="30.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>API\IWrite.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Digitalis.LDTools.DOM.API.Analytics.Severity" Collapsed="true">
+    <Position X="44.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAQAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Analytics.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.ElementFlags" Collapsed="true">
+    <Position X="44.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAI=</HashCode>
+      <FileName>API\Attributes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.BFCFlag" Collapsed="true">
+    <Position X="42.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAACAACAABAAAAAAAAAAAAAAAAIAAQA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.Category" Collapsed="true">
+    <Position X="46.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEE1MGQAiE4ogJFJocYlSiDAhA5A0IgxaYYDiKgjU1A=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.CodeStandards" Collapsed="true">
+    <Position X="48" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAgAAQAAAAAA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.CullingMode" Collapsed="true">
+    <Position X="49.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAACAAAAAAgAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.DocumentStatus" Collapsed="true">
+    <Position X="51.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAEAAQAAEAAAAQAAEABAA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.DOMObjectType" Collapsed="true">
+    <Position X="42.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAECEAAAwQAABAAAAAAAAACAAAAASIAAAAAABAIA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.InsertCheckFlags" Collapsed="true">
+    <Position X="46.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAACAAEAAAA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.InsertCheckResult" Collapsed="true">
+    <Position X="48" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAQAAAAAAAAIAAQAAAAAAIAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.License" Collapsed="true">
+    <Position X="49.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAGAAAA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.PageType" Collapsed="true">
+    <Position X="51.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAYAAACAAAAAEAgQAABAAAAAAAgAgAAIAAAAA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.StepMode" Collapsed="true">
+    <Position X="46.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAABAAAAAgAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.TargetStatus" Collapsed="true">
+    <Position X="49.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAoAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.TexmapGeometryType" Collapsed="true">
+    <Position X="51.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAACAA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.TexmapProjection" Collapsed="true">
+    <Position X="42.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAADAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.API.WindingDirection" Collapsed="true">
+    <Position X="44.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAIAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>API\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.CatalogType" Collapsed="true">
+    <Position X="44.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAECAAAAAAAAAAgAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.ParseFlags" Collapsed="true">
+    <Position X="42.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Digitalis.LDTools.DOM.TargetRedirectType" Collapsed="true">
+    <Position X="48" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAIAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Digitalis.LDTools.DOM.API.DocumentWriterCallback" Collapsed="true">
+    <Position X="44.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Delegates.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Digitalis.LDTools.DOM.API.DocumentTreeChangedEventHandler" Collapsed="true">
+    <Position X="42.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Events.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Digitalis.LDTools.DOM.API.ObjectChangedEventHandler" Collapsed="true">
+    <Position X="49.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Events.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Digitalis.LDTools.DOM.ParserProgressCallback" Collapsed="true">
+    <Position X="51.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Delegates.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Digitalis.LDTools.DOM.ReferenceCacheChangedEventHandler" Collapsed="true">
+    <Position X="42.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Events.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Digitalis.LDTools.Library.LoadProgressCallback" Collapsed="true">
+    <Position X="48" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LibraryManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Digitalis.LDTools.Library.LibraryChangedEventHandler" Collapsed="true">
+    <Position X="46.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LibraryManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
